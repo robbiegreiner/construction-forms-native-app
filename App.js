@@ -23,7 +23,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        <Text style={styles.header}>
           Construction Forms
         </Text>
         <Text style={styles.instructions}>
@@ -42,16 +42,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#E8C712',
   },
-  welcome: {
-    fontSize: 20,
+  header: {
+    fontSize: 36,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
+    fontSize: 24,
     marginBottom: 5,
   },
 });
