@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 import CreateAccount from './CreateAccount';
+import Login from './Login';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -45,6 +46,7 @@ export default class App extends Component<{}> {
       )
     } else {
       return <View>
+        <Login setUser={this.setUser} />
         <CreateAccount setUser={this.setUser}/>
       </View>
     }
