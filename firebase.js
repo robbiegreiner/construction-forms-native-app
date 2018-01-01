@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+
 var config = {
     apiKey: "AIzaSyCgLoAVrYAmJ-IgWPBLjheGy8M2IizgpHU",
     authDomain: "construction-forms.firebaseapp.com",

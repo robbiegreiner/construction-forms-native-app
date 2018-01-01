@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-import Login from './Login';
+import CreateAccount from './CreateAccount';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -21,6 +21,11 @@ export default class App extends Component<{}> {
     this.state = {
       user: null
     };
+    this.setUser = this.setUser.bind(this);
+  }
+
+  setUser(email) {
+    this.setState({user: email})
   }
 
   ifLoggedIn() {
@@ -36,11 +41,12 @@ export default class App extends Component<{}> {
           <Text style={styles.instructions}>
             {instructions}
           </Text>
-          <Login />
         </View>
       )
     } else {
-      return <View><Login /></View>
+      return <View>
+        <CreateAccount setUser={this.setUser}/>
+      </View>
     }
   }
 

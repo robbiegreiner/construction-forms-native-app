@@ -4,11 +4,15 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput
+  TextInput,
+  Button,
+  Alert
 } from 'react-native';
 
+import firebase from './firebase';
 
-export default class Login extends Component<{}> {
+
+export default class CreateAccount extends Component<{}> {
   constructor(){
     super()
     this.state = {
@@ -17,12 +21,18 @@ export default class Login extends Component<{}> {
     };
   }
 
+  createUser(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email,password)
+      .then(response => this.props.setUser(response.email))
+      //catch error here
+  }
+
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.login}>
-          Login Here
+          Create Account Here
         </Text>
         <Text>
           {this.state.email}
@@ -39,6 +49,10 @@ export default class Login extends Component<{}> {
           style={{height:40}}
           placeholder="password"
           onChangeText={(text) => this.setState({password: text})}
+        />
+        <Button
+          onPress={() => this.createUser(this.state.email, this.state.password)}
+          title="Create Account"
         />
       </View>
     );
