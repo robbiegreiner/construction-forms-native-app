@@ -34,12 +34,6 @@ export default class Login extends Component<{}> {
         <Text style={styles.login}>
           Login Here
         </Text>
-        <Text>
-          {this.state.email}
-        </Text>
-        <Text>
-          {this.state.password}
-        </Text>
         <TextInput
           style={{height:40}}
           placeholder="email"

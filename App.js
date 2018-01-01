@@ -37,7 +37,7 @@ export default class App extends Component<{}> {
             Construction Forms
           </Text>
           <Text style={styles.instructions}>
-            Welcome To The Fucking Show
+            {this.state.user}
           </Text>
           <Text style={styles.instructions}>
             {instructions}

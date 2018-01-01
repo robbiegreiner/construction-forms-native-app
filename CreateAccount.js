@@ -34,12 +34,6 @@ export default class CreateAccount extends Component<{}> {
         <Text style={styles.login}>
           Create Account Here
         </Text>
-        <Text>
-          {this.state.email}
-        </Text>
-        <Text>
-          {this.state.password}
-        </Text>
         <TextInput
           style={{height:40}}
           placeholder="email"
