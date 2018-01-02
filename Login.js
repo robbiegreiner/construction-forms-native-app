@@ -46,7 +46,7 @@ export default class Login extends Component<{}> {
         />
         <Button
           onPress={() => this.login(this.state.email, this.state.password)}
-          title="Create Account"
+          title="Login"
         />
       </View>
     );
