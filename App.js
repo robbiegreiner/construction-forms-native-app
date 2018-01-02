@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,6 +5,9 @@ import {
   Text,
   View
 } from 'react-native';
+
+import CreateAccount from './CreateAccount';
+import Login from './Login';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -20,18 +17,46 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+  constructor(){
+    super()
+    this.state = {
+      user: null
+    };
+    this.setUser = this.setUser.bind(this);
+  }
+
+  setUser(email) {
+    this.setState({user: email})
+  }
+
+  ifLoggedIn() {
+    if(this.state.user){
+      return (
+        <View>
+          <Text style={styles.header}>
+            Construction Forms
+          </Text>
+          <Text style={styles.instructions}>
+            {this.state.user}
+          </Text>
+          <Text style={styles.instructions}>
+            {instructions}
+          </Text>
+        </View>
+      )
+    } else {
+      return <View>
+        <Login setUser={this.setUser} />
+        <CreateAccount setUser={this.setUser}/>
+      </View>
+    }
+  }
+
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>
-          Construction Forms
-        </Text>
-        <Text style={styles.instructions}>
-          Welcome To The Fucking Show
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        {this.ifLoggedIn()}
       </View>
     );
   }
