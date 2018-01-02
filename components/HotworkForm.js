@@ -54,48 +54,56 @@ export default class HotworkForm extends Component <{}> {
 
         <Text>Employee Name</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ employee_name: text })}
         />
 
         <Text>Email</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ employee_email: text })}
         />
 
         <Text>Project ID</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ project_id: text })}
         />
 
         <Text>Company</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ company: text })}
         />
 
         <Text>Date</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ date: text })}
         />
 
         <Text>Fire Watch Requirement</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ firewatchRequirement: text })}
         />
 
         <Text>Start Time</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ timeStart: text })}
         />
 
         <Text>Finish Time</Text>
         <TextInput
+          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ finishTime: text })}
         />
