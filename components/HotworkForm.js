@@ -56,15 +56,50 @@ export default class HotworkForm extends Component <{}> {
         <TextInput
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ employee_name: text })}
-          value={this.state.text}
         />
 
         <Text>Email</Text>
         <TextInput
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ employee_email: text })}
-          value={this.state.text}
         />
+
+        <Text>Project ID</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText={(text) => this.setState({ project_id: text })}
+        />
+
+        <Text>Company</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText={(text) => this.setState({ company: text })}
+        />
+
+        <Text>Date</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText={(text) => this.setState({ date: text })}
+        />
+
+        <Text>Fire Watch Requirement</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText={(text) => this.setState({ firewatchRequirement: text })}
+        />
+
+        <Text>Start Time</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText={(text) => this.setState({ timeStart: text })}
+        />
+
+        <Text>Finish Time</Text>
+        <TextInput
+          style={styles.smallInput}
+          onChangeText={(text) => this.setState({ finishTime: text })}
+        />
+
 
         <Button
           onPress={() => this.postForm()}
