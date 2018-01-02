@@ -9,6 +9,7 @@ import {
 
 import CreateAccount from './CreateAccount';
 import Login from './Login';
+import HotworkForm from './HotworkForm';
 
 export default class App extends Component<{}> {
   constructor(){
@@ -59,8 +60,8 @@ export default class App extends Component<{}> {
 
     if(this.state.currentView === 'hotwork'){
       return (
-        <View>
-          <Text>Hotwork Permit Here</Text>
+        <View style={styles.container}>
+          <HotworkForm />
         </View>
       )
     }
@@ -78,11 +79,5 @@ const styles = StyleSheet.create({
     fontSize: 36,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    fontSize: 24,
-    marginBottom: 5,
-  },
+  }
 });
