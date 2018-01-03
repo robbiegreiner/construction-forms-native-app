@@ -9,7 +9,7 @@ import {
   Alert
 } from 'react-native';
 
-import firebase from './firebase';
+import firebase from '../firebase';
 
 
 export default class Login extends Component<{}> {
@@ -41,12 +41,13 @@ export default class Login extends Component<{}> {
         />
         <TextInput
           style={{height:40}}
+          secureTextEntry="true"
           placeholder="password"
           onChangeText={(text) => this.setState({password: text})}
         />
         <Button
           onPress={() => this.login(this.state.email, this.state.password)}
-          title="Create Account"
+          title="Login"
         />
       </View>
     );

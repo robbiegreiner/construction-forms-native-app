@@ -3,24 +3,20 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 
 import CreateAccount from './CreateAccount';
 import Login from './Login';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import HotworkForm from './HotworkForm';
 
 export default class App extends Component<{}> {
   constructor(){
     super()
     this.state = {
-      user: null
+      user: 'robbieg@gmail.com',
+      currentView: 'home'
     };
     this.setUser = this.setUser.bind(this);
   }
@@ -30,7 +26,7 @@ export default class App extends Component<{}> {
   }
 
   ifLoggedIn() {
-    if(this.state.user){
+    if(this.state.user && this.state.currentView === 'home'){
       return (
         <View>
           <Text style={styles.header}>
@@ -39,9 +35,10 @@ export default class App extends Component<{}> {
           <Text style={styles.instructions}>
             {this.state.user}
           </Text>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
+          <Button
+            onPress={() => this.setState({currentView: 'hotwork'})}
+            title="HotWork Permit"
+          />
         </View>
       )
     } else {
@@ -52,32 +49,34 @@ export default class App extends Component<{}> {
     }
   }
 
-
   render() {
-    return (
-      <View style={styles.container}>
-        {this.ifLoggedIn()}
-      </View>
-    );
+    if(this.state.currentView === 'home'){
+      return (
+        <View style={styles.container}>
+          {this.ifLoggedIn()}
+        </View>
+      );
+    }
+
+    if(this.state.currentView === 'hotwork'){
+      return (
+        <View style={styles.container}>
+          <HotworkForm />
+        </View>
+      )
+    }
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     backgroundColor: '#E8C712',
   },
   header: {
     fontSize: 36,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    fontSize: 24,
-    marginBottom: 5,
-  },
+  }
 });
