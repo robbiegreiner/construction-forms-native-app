@@ -49,8 +49,8 @@ export default class HotworkForm extends Component <{}> {
 
   render(){
     return (
-      <ScrollView style={styles.container}>
-
+      <ScrollView style={styles.scrollArea}>
+        <View style={styles.container}>
         <Text style={styles.header}>
           Hotwork Permit
         </Text>
@@ -116,27 +116,31 @@ export default class HotworkForm extends Component <{}> {
           onPress={() => this.postForm()}
           title="Submit"
         />
-
+      </View>
       </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  scrollArea: {
     flex: 1,
-    margin: 20,
     // justifyContent: 'center',
     // alignItems: 'center',
     backgroundColor: '#E8C712',
   },
+  container: {
+    margin: 40
+  },
   header: {
     fontSize: 36,
-    margin: 40,
+    margin: 10,
     textAlign: 'center',
   },
   smallInput: {
     height: 40,
+    marginTop: 5,
+    marginBottom: 10,
     borderColor: 'gray',
     borderWidth: 1
   }
