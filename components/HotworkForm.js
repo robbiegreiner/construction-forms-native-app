@@ -6,7 +6,10 @@ import {
   View,
   TextInput,
   Button,
-  Alert
+  Alert,
+  Picker,
+  DatePickerIOS,
+  ScrollView
 } from 'react-native';
 
 export default class HotworkForm extends Component <{}> {
@@ -17,7 +20,7 @@ export default class HotworkForm extends Component <{}> {
       employee_email: '',
       project_id: '',
       company: '',
-      date: '',
+      date: new Date(),
       firewatchRequirement: '',
       timeStart: '',
       finishTime: '',
@@ -46,7 +49,7 @@ export default class HotworkForm extends Component <{}> {
 
   render(){
     return (
-      <View>
+      <ScrollView style={styles.container}>
 
         <Text style={styles.header}>
           Hotwork Permit
@@ -54,59 +57,59 @@ export default class HotworkForm extends Component <{}> {
 
         <Text>Employee Name</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ employee_name: text })}
         />
 
         <Text>Email</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ employee_email: text })}
         />
 
         <Text>Project ID</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ project_id: text })}
         />
 
         <Text>Company</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ company: text })}
         />
 
         <Text>Date</Text>
-        <TextInput
-          autoCorrect="false"
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ date: text })}
+        <DatePickerIOS
+          date={this.state.date}
+          onDateChange={(newDate) => this.setState({date: newDate})}
         />
 
         <Text>Fire Watch Requirement</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ firewatchRequirement: text })}
         />
 
         <Text>Start Time</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ timeStart: text })}
         />
 
         <Text>Finish Time</Text>
         <TextInput
-          autoCorrect="false"
           style={styles.smallInput}
           onChangeText={(text) => this.setState({ finishTime: text })}
         />
+
+        <Text>Area Inspected</Text>
+        <Picker
+          selectedValue={this.state.areaInspected}
+          onValueChange={(itemValue) => this.setState({areaInspected: itemValue})}>
+          <Picker.Item label="Yes" value="yes" />
+          <Picker.Item label="No" value="no" />
+        </Picker>
 
 
         <Button
@@ -114,7 +117,7 @@ export default class HotworkForm extends Component <{}> {
           title="Submit"
         />
 
-      </View>
+      </ScrollView>
     )
   }
 }
@@ -122,14 +125,15 @@ export default class HotworkForm extends Component <{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    margin: 20,
+    // justifyContent: 'center',
+    // alignItems: 'center',
     backgroundColor: '#E8C712',
   },
   header: {
     fontSize: 36,
+    margin: 40,
     textAlign: 'center',
-    margin: 10,
   },
   smallInput: {
     height: 40,

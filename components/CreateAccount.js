@@ -6,7 +6,8 @@ import {
   View,
   TextInput,
   Button,
-  Alert
+  Alert,
+  Picker
 } from 'react-native';
 
 import firebase from '../firebase';
@@ -53,36 +54,32 @@ export default class CreateAccount extends Component<{}> {
           Create Account Here
         </Text>
         <TextInput
-          autoCorrect="false"
           style={{height:40}}
           placeholder="name"
           onChangeText={(text) => this.setState({name: text})}
         />
         <TextInput
-          autoCorrect="false"
           style={{height:40}}
           placeholder="position"
           onChangeText={(text) => this.setState({position: text})}
         />
         <TextInput
-          autoCorrect="false"
           style={{height:40}}
           placeholder="phone"
           onChangeText={(text) => this.setState({phone: text})}
         />
         <TextInput
-          autoCorrect="false"
           style={{height:40}}
           placeholder="email"
           onChangeText={(text) => this.setState({email: text})}
         />
         <TextInput
-          autoCorrect="false"
           style={{height:40}}
           secureTextEntry="true"
           placeholder="password"
           onChangeText={(text) => this.setState({password: text})}
         />
+
         <Button
           onPress={() => this.createUser(
             this.state.email,
