@@ -11,6 +11,7 @@ import {
   DatePickerIOS,
   ScrollView
 } from 'react-native';
+import CheckBox from 'react-native-checkbox';
 
 export default class HotworkForm extends Component <{}> {
   constructor(){
@@ -42,7 +43,18 @@ export default class HotworkForm extends Component <{}> {
       },
       body: JSON.stringify({
         employee_name: this.state.employee_name,
-        employee_email: this.state.employee_email
+        employee_email: this.state.employee_email,
+        project_id: this.state.project_id,
+        company: this.state.company,
+        date: this.state.date,
+        firewatchRequirement: this.state.firewatchRequirement,
+        timeStart: this.state.timeStart,
+        finishTime: this.state.finishTime,
+        areaInspected: this.state.areaInspected,
+        // fireExtinguisher: this.state.fireExtinguisher,
+        // flammablesRemoved: this.state.flammablesRemoved,
+        // smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
+        // sprinklerHeadsProtected: this.state.employee_name
       })
     });
   };
@@ -51,72 +63,72 @@ export default class HotworkForm extends Component <{}> {
     return (
       <ScrollView style={styles.scrollArea}>
         <View style={styles.container}>
-        <Text style={styles.header}>
-          Hotwork Permit
-        </Text>
+          <Text style={styles.header}>
+            Hotwork Permit
+          </Text>
 
-        <Text>Employee Name</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ employee_name: text })}
-        />
+          <Text>Employee Name</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ employee_name: text })}
+          />
 
-        <Text>Email</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ employee_email: text })}
-        />
+          <Text>Email</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ employee_email: text })}
+          />
 
-        <Text>Project ID</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ project_id: text })}
-        />
+          <Text>Project ID</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ project_id: text })}
+          />
 
-        <Text>Company</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ company: text })}
-        />
+          <Text>Company</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ company: text })}
+          />
 
-        <Text>Date</Text>
-        <DatePickerIOS
-          date={this.state.date}
-          onDateChange={(newDate) => this.setState({date: newDate})}
-        />
+          <Text>Date</Text>
+          <DatePickerIOS
+            date={this.state.date}
+            onDateChange={(newDate) => this.setState({date: newDate})}
+          />
 
-        <Text>Fire Watch Requirement</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ firewatchRequirement: text })}
-        />
+          <Text>Fire Watch Requirement</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ firewatchRequirement: text })}
+          />
 
-        <Text>Start Time</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ timeStart: text })}
-        />
+          <Text>Start Time</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ timeStart: text })}
+          />
 
-        <Text>Finish Time</Text>
-        <TextInput
-          style={styles.smallInput}
-          onChangeText={(text) => this.setState({ finishTime: text })}
-        />
+          <Text>Finish Time</Text>
+          <TextInput
+            style={styles.smallInput}
+            onChangeText={(text) => this.setState({ finishTime: text })}
+          />
 
-        <Text>Area Inspected</Text>
-        <Picker
-          selectedValue={this.state.areaInspected}
-          onValueChange={(itemValue) => this.setState({areaInspected: itemValue})}>
-          <Picker.Item label="Yes" value="yes" />
-          <Picker.Item label="No" value="no" />
-        </Picker>
+          <CheckBox
+            label='Area Inspected'
+            onChange={(checked) => this.setState({
+              areaInspected: checked
+            })}
+          />
 
 
-        <Button
-          onPress={() => this.postForm()}
-          title="Submit"
-        />
-      </View>
+
+          <Button
+            onPress={() => this.postForm()}
+            title="Submit"
+          />
+        </View>
       </ScrollView>
     )
   }
@@ -134,7 +146,8 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 36,
-    margin: 10,
+    marginTop: 15,
+    marginBottom: 15,
     textAlign: 'center',
   },
   smallInput: {
@@ -143,5 +156,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderColor: 'gray',
     borderWidth: 1
+  },
+  picker: {
+    height: 40,
   }
 });
