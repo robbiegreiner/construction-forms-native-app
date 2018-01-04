@@ -51,10 +51,10 @@ export default class HotworkForm extends Component <{}> {
         timeStart: this.state.timeStart,
         finishTime: this.state.finishTime,
         areaInspected: this.state.areaInspected,
-        // fireExtinguisher: this.state.fireExtinguisher,
-        // flammablesRemoved: this.state.flammablesRemoved,
-        // smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
-        // sprinklerHeadsProtected: this.state.employee_name
+        fireExtinguisher: this.state.fireExtinguisher,
+        flammablesRemoved: this.state.flammablesRemoved,
+        smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
+        sprinklerHeadsProtected: this.state.sprinklerHeadsProtected
       })
     });
   };
@@ -119,6 +119,34 @@ export default class HotworkForm extends Component <{}> {
             label='Area Inspected'
             onChange={(checked) => this.setState({
               areaInspected: checked
+            })}
+          />
+
+          <CheckBox
+            label='Fire Extinguisher Present'
+            onChange={(checked) => this.setState({
+              fireExtinguisher: checked
+            })}
+          />
+
+          <CheckBox
+            label='All flammables and combustibles removed from the area'
+            onChange={(checked) => this.setState({
+              flammablesRemoved: checked
+            })}
+          />
+
+          <CheckBox
+            label='Smoke Detectors in area are disabled'
+            onChange={(checked) => this.setState({
+              flammablesRemoved: checked
+            })}
+          />
+
+          <CheckBox
+            label='Sprinkler heads in area are protected'
+            onChange={(checked) => this.setState({
+              sprinklerHeadsProtected: checked
             })}
           />
 
