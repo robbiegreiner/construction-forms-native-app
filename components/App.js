@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   formButton: {
-    
+
     height: 50,
     width: 200,
     color: 'blue'
