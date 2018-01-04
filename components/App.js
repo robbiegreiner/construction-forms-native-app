@@ -14,7 +14,7 @@ export default class App extends Component<{}> {
   constructor(){
     super()
     this.state = {
-      user: null,
+      user: "robbieg@gmail.com",
       currentView: 'home'
     };
     this.setUser = this.setUser.bind(this);
@@ -27,14 +27,18 @@ export default class App extends Component<{}> {
   ifLoggedIn() {
     if(this.state.user && this.state.currentView === 'home'){
       return (
-        <View>
+        <View style={styles.container}>
           <Text style={styles.header}>
             Construction Forms
           </Text>
-          <Text style={styles.instructions}>
-            {this.state.user}
+          <Text style={styles.user}>
+            Welcome, {this.state.user}
+          </Text>
+          <Text>
+            Choose your form to complete!
           </Text>
           <Button
+            style={styles.formButton}
             onPress={() => this.setState({currentView: 'hotwork'})}
             title="HotWork Permit"
           />
@@ -72,7 +76,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#E8C712',
   },
   header: {
+    marginTop: 180,
     fontSize: 36,
     textAlign: 'center',
+  },
+  user : {
+    textAlign: 'center'
+  },
+  formButton: {
+    
+    height: 50,
+    width: 200,
+    color: 'blue'
   }
 });

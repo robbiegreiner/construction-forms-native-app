@@ -97,8 +97,8 @@ export default class CreateAccount extends Component<{}> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-    // justifyContent: 'center',
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: 180,
     backgroundColor: '#E8C712',

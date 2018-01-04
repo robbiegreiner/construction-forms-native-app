@@ -34,35 +34,30 @@ export default class Login extends Component<{}> {
     if(!this.state.createAccount){
       return (
         <View style={styles.container}>
-          <View>
-            <Text style={styles.login}>
-              Login Here
-            </Text>
-            <TextInput
-              style={{height:40, width:100}}
-              placeholder="email"
-              onChangeText={(text) => this.setState({email: text})}
-            />
-            <TextInput
-              style={{height:40}}
-              secureTextEntry="true"
-              placeholder="password"
-              onChangeText={(text) => this.setState({password: text})}
-            />
+          <Text style={styles.login}>
+            Login Here
+          </Text>
+          <TextInput
+            style={{height:40, width:200}}
+            placeholder="email"
+            onChangeText={(text) => this.setState({email: text})}
+          />
+          <TextInput
+            style={{height:40, width: 200}}
+            secureTextEntry="true"
+            placeholder="password"
+            onChangeText={(text) => this.setState({password: text})}
+          />
 
-            <Button
-              style={{marginTop: 20}}
-              onPress={() => this.login(this.state.email, this.state.password)}
-              title="Login"
-            />
+          <Button
+            onPress={() => this.login(this.state.email, this.state.password)}
+            title="Login"
+          />
 
-          </View>
-          <View style={{marginTop: 150}}>
-            <Button
-              onPress={() => {this.setState({createAccount: true})}}
-              title="Create Account Here"
-            />
-          </View>
+          <Button
+            onPress={() => {this.setState({createAccount: true})}}
+            title="Create Account Here"
+          />
         </View>
 
       );
@@ -76,9 +71,8 @@ export default class Login extends Component<{}> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    // justifyContent: 'center',
-    marginTop: 100,
+    marginTop: 180,
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E8C712',
   },
