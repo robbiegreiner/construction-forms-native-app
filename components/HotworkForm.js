@@ -12,6 +12,8 @@ import {
   ScrollView
 } from 'react-native';
 import CheckBox from 'react-native-checkbox';
+import SignaturePad from 'react-native-signature-pad';
+import Demo from './Demo'
 
 export default class HotworkForm extends Component <{}> {
   constructor(){
@@ -29,9 +31,18 @@ export default class HotworkForm extends Component <{}> {
       fireExtinguisher: false,
       flammablesRemoved: false,
       smokeDetectorsDisabled: false,
-      sprinklerHeadsProtected: false
+      sprinklerHeadsProtected: false,
+      signature: ''
     }
   }
+
+  _signaturePadError(error){
+    console.error(error);
+  };
+
+  _signaturePadChange({base64DataUrl}){
+    this.setState({signature: base64DataUrl});
+  };
 
   postForm() {
     Alert.alert('hey')
@@ -54,7 +65,8 @@ export default class HotworkForm extends Component <{}> {
         fireExtinguisher: this.state.fireExtinguisher,
         flammablesRemoved: this.state.flammablesRemoved,
         smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
-        sprinklerHeadsProtected: this.state.sprinklerHeadsProtected
+        sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
+        signature: this.state.signature
       })
     });
   };
@@ -155,6 +167,14 @@ export default class HotworkForm extends Component <{}> {
           <Button
             onPress={() => this.postForm()}
             title="Submit"
+          />
+
+
+
+          <SignaturePad onError={this._signaturePadError}
+                        onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
+                        style={{ backgroundColor: 'white',
+                        width: 300, height: 150 }}
           />
         </View>
       </ScrollView>
