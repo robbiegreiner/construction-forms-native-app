@@ -7,9 +7,6 @@ import {
   Button
 } from 'react-native';
 
-
-
-import CreateAccount from './CreateAccount';
 import Login from './Login';
 import HotworkForm from './HotworkForm';
 
@@ -17,7 +14,7 @@ export default class App extends Component<{}> {
   constructor(){
     super()
     this.state = {
-      user: 'robbieg@gmail.com',
+      user: null,
       currentView: 'home'
     };
     this.setUser = this.setUser.bind(this);
@@ -46,7 +43,6 @@ export default class App extends Component<{}> {
     } else {
       return <View>
         <Login setUser={this.setUser} />
-        <CreateAccount setUser={this.setUser}/>
       </View>
     }
   }
@@ -73,8 +69,6 @@ export default class App extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     backgroundColor: '#E8C712',
   },
   header: {

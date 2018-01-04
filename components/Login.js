@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import firebase from '../firebase';
+import CreateAccount from './CreateAccount';
 
 
 export default class Login extends Component<{}> {
@@ -17,7 +18,8 @@ export default class Login extends Component<{}> {
     super()
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      createAccount: null
     };
   }
 
@@ -29,34 +31,56 @@ export default class Login extends Component<{}> {
 
 
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.login}>
-          Login Here
-        </Text>
-        <TextInput
-          style={{height:40}}
-          placeholder="email"
-          onChangeText={(text) => this.setState({email: text})}
-        />
-        <TextInput
-          style={{height:40}}
-          secureTextEntry="true"
-          placeholder="password"
-          onChangeText={(text) => this.setState({password: text})}
-        />
-        <Button
-          onPress={() => this.login(this.state.email, this.state.password)}
-          title="Login"
-        />
-      </View>
-    );
+    if(!this.state.createAccount){
+      return (
+        <View style={styles.container}>
+          <View>
+            <Text style={styles.login}>
+              Login Here
+            </Text>
+            <TextInput
+              style={{height:40}}
+              placeholder="email"
+              onChangeText={(text) => this.setState({email: text})}
+            />
+            <TextInput
+              style={{height:40}}
+              secureTextEntry="true"
+              placeholder="password"
+              onChangeText={(text) => this.setState({password: text})}
+            />
+
+            <Button
+              style={{marginTop: 20}}
+              onPress={() => this.login(this.state.email, this.state.password)}
+              title="Login"
+            />
+
+          </View>
+          <View style={{marginTop: 150}}>
+            <Button
+              onPress={() => {this.setState({createAccount: true})}}
+              title="Create Account Here"
+            />
+          </View>
+        </View>
+
+      );
+    } else {
+      return (
+        <CreateAccount setUser={this.props.setUser}/>
+      )
+    }
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-
+    flex: 1,
+    // justifyContent: 'center',
+    marginTop: 100,
+    alignItems: 'center',
+    backgroundColor: '#E8C712',
   },
   login: {
     textAlign: 'center',
