@@ -39,7 +39,7 @@ export default class Login extends Component<{}> {
               Login Here
             </Text>
             <TextInput
-              style={{height:40}}
+              style={{height:40, width:100}}
               placeholder="email"
               onChangeText={(text) => this.setState({email: text})}
             />

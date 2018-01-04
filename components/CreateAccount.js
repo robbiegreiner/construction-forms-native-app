@@ -54,27 +54,27 @@ export default class CreateAccount extends Component<{}> {
           Create Account Here
         </Text>
         <TextInput
-          style={{height:40}}
+          style={{height:40, width:200}}
           placeholder="name"
           onChangeText={(text) => this.setState({name: text})}
         />
         <TextInput
-          style={{height:40}}
+          style={{height:40, width:200}}
           placeholder="position"
           onChangeText={(text) => this.setState({position: text})}
         />
         <TextInput
-          style={{height:40}}
+          style={{height:40, width:200}}
           placeholder="phone"
           onChangeText={(text) => this.setState({phone: text})}
         />
         <TextInput
-          style={{height:40}}
+          style={{height:40, width:200}}
           placeholder="email"
           onChangeText={(text) => this.setState({email: text})}
         />
         <TextInput
-          style={{height:40}}
+          style={{height:40, width:200}}
           secureTextEntry="true"
           placeholder="password"
           onChangeText={(text) => this.setState({password: text})}
