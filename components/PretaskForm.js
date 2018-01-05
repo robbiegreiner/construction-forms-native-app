@@ -36,10 +36,10 @@ export default class PretaskForm extends Component <{}> {
       fluidDischarge: false,
       subInvolvement: false,
       specialPermits: false,
-      buddyAssignments: false,
+      buddyAssignment: false,
       safetyLocations: false,
       lifting: false,
-      hazards: false,
+      hazards: '',
       signature: ''
     }
   }
@@ -78,7 +78,7 @@ export default class PretaskForm extends Component <{}> {
         fluidDischarge: this.state.fluidDischarge,
         subInvolvement: this.state.subInvolvement,
         specialPermits: this.state.specialPermits,
-        buddyAssignments: this.state.buddyAssignments,
+        buddyAssignment: this.state.buddyAssignment,
         safetyLocations: this.state.safetyLocations,
         lifting: this.state.lifting,
         hazards: this.state.hazards,
@@ -100,24 +100,28 @@ export default class PretaskForm extends Component <{}> {
 
           <Text>Employee Name</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ employee_name: text })}
           />
 
           <Text>Email</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ employee_email: text })}
           />
 
           <Text>Project ID</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ project_id: text })}
           />
 
           <Text>Company</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ company: text })}
           />
@@ -130,6 +134,7 @@ export default class PretaskForm extends Component <{}> {
 
           <Text>Crew Size</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ crewSize: text })}
           />
@@ -239,7 +244,7 @@ export default class PretaskForm extends Component <{}> {
             labelStyle={{color:'black'}}
             label='Employee is assigned a buddy/partner?'
             onChange={(checked) => this.setState({
-              buddyAssignments: checked
+              buddyAssignment: checked
             })}
           />
 
@@ -264,7 +269,7 @@ export default class PretaskForm extends Component <{}> {
           <Text>Identify any hazards that will be faced during this work</Text>
           <TextInput
             style={styles.bigInput}
-            onChangeText={(text) => this.setState({ crewSize: text })}
+            onChangeText={(text) => this.setState({ hazards: text })}
           />
 
           <SignaturePad onError={this._signaturePadError}

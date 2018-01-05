@@ -81,24 +81,28 @@ export default class HotworkForm extends Component <{}> {
 
           <Text>Employee Name</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ employee_name: text })}
           />
 
           <Text>Email</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ employee_email: text })}
           />
 
           <Text>Project ID</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ project_id: text })}
           />
 
           <Text>Company</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ company: text })}
           />
@@ -111,6 +115,7 @@ export default class HotworkForm extends Component <{}> {
 
           <Text>Fire Watch Requirement</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ firewatchRequirement: text })}
           />
@@ -130,6 +135,7 @@ export default class HotworkForm extends Component <{}> {
           />
 
           <CheckBox
+            labelLines={2}
             label='All flammables and combustibles removed from the area'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
