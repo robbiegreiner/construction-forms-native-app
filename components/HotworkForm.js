@@ -64,7 +64,7 @@ export default class HotworkForm extends Component <{}> {
         flammablesRemoved: this.state.flammablesRemoved,
         smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
         sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
-        signature: this.state.signature
+        signature: this.state.signature.split(',')[1]
       })
     });
   };
