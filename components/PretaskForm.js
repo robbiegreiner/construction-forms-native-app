@@ -15,7 +15,7 @@ import CheckBox from 'react-native-checkbox';
 import SignaturePad from 'react-native-signature-pad';
 import Demo from './Demo'
 
-export default class HotworkForm extends Component <{}> {
+export default class PretaskForm extends Component <{}> {
   constructor(){
     super();
     this.state = {
@@ -24,14 +24,21 @@ export default class HotworkForm extends Component <{}> {
       project_id: null,
       company: '',
       date: new Date(),
-      firewatchRequirement: '',
-      timeStart: '',
-      finishTime: '',
-      areaInspected: false,
-      fireExtinguisher: false,
-      flammablesRemoved: false,
-      smokeDetectorsDisabled: false,
-      sprinklerHeadsProtected: false,
+      crewSize: null,
+      tools: false,
+      requireTraining: false,
+      msdsReviewed: false,
+      adequateLighting: false,
+      weatherConditions: false,
+      equipmentShutDown: false,
+      impactOwner: false,
+      planReview: false,
+      fluidDischarge: false,
+      subInvolvement: false,
+      specialPermits: false,
+      buddyAssignments: false,
+      lifting: false,
+      hazards: false,
       signature: ''
     }
   }
@@ -46,7 +53,7 @@ export default class HotworkForm extends Component <{}> {
 
   postForm() {
     Alert.alert('hey')
-    fetch('http://localhost:4000/api/v1/forms/hotwork', {
+    fetch('http://localhost:4000/api/v1/forms/pretask', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -58,14 +65,21 @@ export default class HotworkForm extends Component <{}> {
         project_id: this.state.project_id,
         company: this.state.company,
         date: this.state.date,
-        firewatchRequirement: this.state.firewatchRequirement,
-        timeStart: this.state.timeStart,
-        finishTime: this.state.finishTime,
-        areaInspected: this.state.areaInspected,
-        fireExtinguisher: this.state.fireExtinguisher,
-        flammablesRemoved: this.state.flammablesRemoved,
-        smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
-        sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
+        crewSize: this.state.crewSize,
+        tools: this.state.tools,
+        requireTraining: this.state.requireTraining,
+        msdsReviewed: this.state.msdsReviewed,
+        adequateLighting: this.state.adequateLighting,
+        weatherConditions: this.state.weatherConditions,
+        equipmentShutDown: this.state.equipmentShutDown,
+        impactOwner: this.state.impactOwner,
+        planReview: this.state.planReview,
+        fluidDischarge: this.state.fluidDischarge,
+        subInvolvement: this.state.subInvolvement,
+        specialPermits: this.state.specialPermits,
+        buddyAssignments: this.state.buddyAssignments,
+        lifting: this.state.lifting,
+        hazards: this.state.hazards,
         signature: this.state.signature
       })
     });
