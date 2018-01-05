@@ -21,7 +21,7 @@ export default class HotworkForm extends Component <{}> {
     this.state = {
       employee_name: '',
       employee_email: '',
-      project_id: '',
+      project_id: null,
       company: '',
       date: new Date(),
       firewatchRequirement: '',
@@ -81,24 +81,28 @@ export default class HotworkForm extends Component <{}> {
 
           <Text>Employee Name</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ employee_name: text })}
           />
 
           <Text>Email</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ employee_email: text })}
           />
 
           <Text>Project ID</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ project_id: text })}
           />
 
           <Text>Company</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ company: text })}
           />
@@ -111,20 +115,9 @@ export default class HotworkForm extends Component <{}> {
 
           <Text>Fire Watch Requirement</Text>
           <TextInput
+            autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => this.setState({ firewatchRequirement: text })}
-          />
-
-          <Text>Start Time</Text>
-          <TextInput
-            style={styles.smallInput}
-            onChangeText={(text) => this.setState({ timeStart: text })}
-          />
-
-          <Text>Finish Time</Text>
-          <TextInput
-            style={styles.smallInput}
-            onChangeText={(text) => this.setState({ finishTime: text })}
           />
 
           <CheckBox
@@ -142,6 +135,7 @@ export default class HotworkForm extends Component <{}> {
           />
 
           <CheckBox
+            labelLines={2}
             label='All flammables and combustibles removed from the area'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -172,8 +166,8 @@ export default class HotworkForm extends Component <{}> {
 
 
           <SignaturePad onError={this._signaturePadError}
-                        onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
-                        style={{ backgroundColor: 'white',
+          onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
+          style={{ backgroundColor: 'white',
                         width: 300, height: 150 }}
           />
         </View>
