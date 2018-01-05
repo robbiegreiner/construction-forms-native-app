@@ -137,8 +137,8 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Does every crew member know how to use assigned tools & equipment?'
-            labelStyle={{}}
             onChange={(checked) => this.setState({
               areaInspected: checked
             })}
@@ -146,6 +146,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Does this work require special training?'
             onChange={(checked) => this.setState({
               requireTraining: checked
@@ -154,6 +155,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Do you need to review an MSDS to proceed with this work?'
             onChange={(checked) => this.setState({
               msdsReviewed: checked
@@ -162,6 +164,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Is there adequate lighting and access?'
             onChange={(checked) => this.setState({
               adequateLighting: checked
@@ -170,6 +173,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Will weather conditions affect the safety or quality of this work?'
             onChange={(checked) => this.setState({
               weatherConditions: checked
@@ -178,6 +182,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Does this task require shutdown of systems or equipment?'
             onChange={(checked) => this.setState({
               equipmentShutDown: checked
@@ -186,6 +191,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Is there any potential to impact existing Owner or Construction activity? '
             onChange={(checked) => this.setState({
               impactOwner: checked
@@ -194,6 +200,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Have shop drawings, contract drawings, and as-builts been reviewed? '
             onChange={(checked) => this.setState({
               planReview: checked
@@ -202,6 +209,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Will there be any discharge of fluids? '
             onChange={(checked) => this.setState({
               fluidDischarge: checked
@@ -210,6 +218,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Do other subcontractors need to be involved?'
             onChange={(checked) => this.setState({
               subInvolvement: checked
@@ -218,6 +227,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Does this task require any special permits/procedures?'
             onChange={(checked) => this.setState({
               specialPermits: checked
@@ -226,6 +236,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Employee is assigned a buddy/partner?'
             onChange={(checked) => this.setState({
               buddyAssignments: checked
@@ -234,6 +245,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={3}
+            labelStyle={{color:'black'}}
             label='Crew knows location of fire extinguishers, eyewashes, defibulators?'
             onChange={(checked) => this.setState({
               safetyLocations: checked
@@ -242,6 +254,7 @@ export default class PretaskForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='Does this work involve any heavy or repetitive lifting?'
             onChange={(checked) => this.setState({
               lifting: checked
