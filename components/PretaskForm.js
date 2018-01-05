@@ -37,6 +37,7 @@ export default class PretaskForm extends Component <{}> {
       subInvolvement: false,
       specialPermits: false,
       buddyAssignments: false,
+      safetyLocations: false,
       lifting: false,
       hazards: false,
       signature: ''
@@ -78,6 +79,7 @@ export default class PretaskForm extends Component <{}> {
         subInvolvement: this.state.subInvolvement,
         specialPermits: this.state.specialPermits,
         buddyAssignments: this.state.buddyAssignments,
+        safetyLocations: this.state.safetyLocations,
         lifting: this.state.lifting,
         hazards: this.state.hazards,
         signature: this.state.signature
@@ -85,12 +87,15 @@ export default class PretaskForm extends Component <{}> {
     });
   };
 
+  //maybe use an array and generate the checkbox passing
+  //{label and what to set?}
+
   render(){
     return (
       <ScrollView style={styles.scrollArea}>
         <View style={styles.container}>
           <Text style={styles.header}>
-            Hotwork Permit
+            Pretask Plan Form
           </Text>
 
           <Text>Employee Name</Text>
@@ -123,47 +128,137 @@ export default class PretaskForm extends Component <{}> {
             onDateChange={(newDate) => this.setState({date: newDate})}
           />
 
-          <Text>Fire Watch Requirement</Text>
+          <Text>Crew Size</Text>
           <TextInput
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ firewatchRequirement: text })}
+            onChangeText={(text) => this.setState({ crewSize: text })}
           />
 
+
           <CheckBox
-            label='Area Inspected'
+            labelLines={2}
+            label='Does every crew member know how to use assigned tools & equipment?'
+            labelStyle={{}}
             onChange={(checked) => this.setState({
               areaInspected: checked
             })}
           />
 
           <CheckBox
-            label='Fire Extinguisher Present'
+            labelLines={2}
+            label='Does this work require special training?'
             onChange={(checked) => this.setState({
-              fireExtinguisher: checked
+              requireTraining: checked
             })}
           />
 
           <CheckBox
-            label='All flammables and combustibles removed from the area'
+            labelLines={2}
+            label='Do you need to review an MSDS to proceed with this work?'
             onChange={(checked) => this.setState({
-              flammablesRemoved: checked
+              msdsReviewed: checked
             })}
           />
 
           <CheckBox
-            label='Smoke Detectors in area are disabled'
+            labelLines={2}
+            label='Is there adequate lighting and access?'
             onChange={(checked) => this.setState({
-              flammablesRemoved: checked
+              adequateLighting: checked
             })}
           />
 
           <CheckBox
-            label='Sprinkler heads in area are protected'
+            labelLines={2}
+            label='Will weather conditions affect the safety or quality of this work?'
             onChange={(checked) => this.setState({
-              sprinklerHeadsProtected: checked
+              weatherConditions: checked
             })}
           />
 
+          <CheckBox
+            labelLines={2}
+            label='Does this task require shutdown of systems or equipment?'
+            onChange={(checked) => this.setState({
+              equipmentShutDown: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Is there any potential to impact existing Owner or Construction activity? '
+            onChange={(checked) => this.setState({
+              impactOwner: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Have shop drawings, contract drawings, and as-builts been reviewed? '
+            onChange={(checked) => this.setState({
+              planReview: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Will there be any discharge of fluids? '
+            onChange={(checked) => this.setState({
+              fluidDischarge: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Do other subcontractors need to be involved?'
+            onChange={(checked) => this.setState({
+              subInvolvement: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Does this task require any special permits/procedures?'
+            onChange={(checked) => this.setState({
+              specialPermits: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Employee is assigned a buddy/partner?'
+            onChange={(checked) => this.setState({
+              buddyAssignments: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={3}
+            label='Crew knows location of fire extinguishers, eyewashes, defibulators?'
+            onChange={(checked) => this.setState({
+              safetyLocations: checked
+            })}
+          />
+
+          <CheckBox
+            labelLines={2}
+            label='Does this work involve any heavy or repetitive lifting?'
+            onChange={(checked) => this.setState({
+              lifting: checked
+            })}
+          />
+
+          <Text>Identify any hazards that will be faced during this work</Text>
+          <TextInput
+            style={styles.bigInput}
+            onChangeText={(text) => this.setState({ crewSize: text })}
+          />
+
+          <SignaturePad onError={this._signaturePadError}
+          onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
+          style={{ backgroundColor: 'white',
+                        width: 300, height: 150 }}
+          />
 
 
           <Button
@@ -173,11 +268,7 @@ export default class PretaskForm extends Component <{}> {
 
 
 
-          <SignaturePad onError={this._signaturePadError}
-          onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
-          style={{ backgroundColor: 'white',
-                        width: 300, height: 150 }}
-          />
+
         </View>
       </ScrollView>
     )
@@ -202,6 +293,13 @@ const styles = StyleSheet.create({
   },
   smallInput: {
     height: 40,
+    marginTop: 5,
+    marginBottom: 10,
+    borderColor: 'gray',
+    borderWidth: 1
+  },
+  bigInput: {
+    height: 120,
     marginTop: 5,
     marginBottom: 10,
     borderColor: 'gray',

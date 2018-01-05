@@ -9,6 +9,7 @@ import {
 
 import Login from './Login';
 import HotworkForm from './HotworkForm';
+import PretaskForm from './PretaskForm';
 
 export default class App extends Component<{}> {
   constructor(){
@@ -42,6 +43,11 @@ export default class App extends Component<{}> {
             onPress={() => this.setState({currentView: 'hotwork'})}
             title="HotWork Permit"
           />
+          <Button
+            style={styles.formButton}
+            onPress={() => this.setState({currentView: 'pretask'})}
+            title="Pretask Plan Form"
+          />
         </View>
       )
     } else {
@@ -64,6 +70,14 @@ export default class App extends Component<{}> {
       return (
         <View style={styles.container}>
           <HotworkForm />
+        </View>
+      )
+    }
+
+    if(this.state.currentView === 'pretask'){
+      return (
+        <View style={styles.container}>
+          <PretaskForm />
         </View>
       )
     }
