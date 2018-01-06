@@ -12,10 +12,12 @@ import Login from './Login';
 import HotworkForm from './HotworkForm';
 import PretaskForm from './PretaskForm';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
+      userEmail: null,
+      userID: null,
       user: null,
       currentView: 'home',
     };
@@ -23,8 +25,8 @@ export default class App extends Component<{}> {
     this.setView = this.setView.bind(this);
   }
 
-  setUser(email) {
-    this.setState({ user: email });
+  setUser(userEmail, userID, user) {
+    this.setState({ userEmail, userID, user });
   }
 
   setView(currentView) {
@@ -62,7 +64,11 @@ export default class App extends Component<{}> {
     if (this.state.currentView === 'hotwork') {
       return (
         <View style={styles.container}>
-          <HotworkForm />
+          <HotworkForm
+            userEmail={this.state.userEmail}
+            userID={this.state.userID}
+            user={this.state.user}
+          />
         </View>
       );
     }
@@ -70,7 +76,11 @@ export default class App extends Component<{}> {
     if (this.state.currentView === 'pretask') {
       return (
         <View style={styles.container}>
-          <PretaskForm />
+          <PretaskForm
+            userEmail={this.state.userEmail}
+            userID={this.state.userID}
+            user={this.state.user}
+          />
         </View>
       );
     }

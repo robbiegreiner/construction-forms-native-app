@@ -28,7 +28,6 @@ export default class CreateAccount extends Component<{}> {
 
   createUser(email, password, position, phone, name) {
     firebase.auth().createUserWithEmailAndPassword(email,password)
-      .then(response => this.props.setUser(response.email))
       .then(this.postEmployee(email, position, phone, name))
       //catch error here
   }
@@ -45,6 +44,7 @@ export default class CreateAccount extends Component<{}> {
       }
     )
     .then(res => res.json())
+    .then(response => this.props.setUser(email, response.id, name))
     .catch(error => { throw error; })
   }
 

@@ -14,7 +14,7 @@ import firebase from '../firebase';
 import CreateAccount from './CreateAccount';
 
 
-export default class Login extends Component<{}> {
+export default class Login extends Component {
   constructor(){
     super()
     this.state = {
@@ -26,8 +26,19 @@ export default class Login extends Component<{}> {
 
   login(email, password) {
     firebase.auth().signInWithEmailAndPassword(email,password)
-      .then(response => this.props.setUser(response.email))
+      .then(response => this.getEmployeeData(email))
       //catch error here
+  }
+
+  getEmployeeData(email) {
+    fetch(`http://localhost:4000/api/v1/employees`)
+      .then(response => response.json())
+      .then((parsedResponse) => {
+        const employee = parsedResponse.filter(person => {
+          return person.email === email;
+        })
+        this.props.setUser(employee[0].email, employee[0].id, employee[0].name)
+      });
   }
 
 
