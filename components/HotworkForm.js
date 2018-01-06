@@ -128,21 +128,22 @@ export default class HotworkForm extends Component <{}> {
             onChangeText={(text) => this.setState({ company: text })}
           />
 
-          <Text>Date</Text>
+          <Text style={{marginTop:20}}>Date</Text>
           <DatePickerIOS
             date={this.state.date}
             onDateChange={(newDate) => this.setState({date: newDate})}
           />
 
-          <Text>Fire Watch Requirement</Text>
+          <Text style={{marginTop:10}}>Fire Watch Requirement</Text>
           <TextInput
             autoCorrect={false}
-            style={styles.smallInput}
+            style={styles.fireInput}
             onChangeText={(text) => this.setState({ firewatchRequirement: text })}
           />
 
           <CheckBox
             label='Area Inspected'
+            containerStyle={{marginTop:10}}
             labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               areaInspected: checked
@@ -151,6 +152,7 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             label='Fire Extinguisher Present'
+            containerStyle={{marginTop:10}}
             labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               fireExtinguisher: checked
@@ -160,6 +162,7 @@ export default class HotworkForm extends Component <{}> {
           <CheckBox
             labelLines={2}
             labelStyle={{color:'black'}}
+            containerStyle={{marginTop:10}}
             label='All flammables and combustibles removed from the area'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -168,6 +171,7 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             labelStyle={{color:'black'}}
+            containerStyle={{marginTop:10}}
             label='Smoke Detectors in area are disabled'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -175,6 +179,7 @@ export default class HotworkForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10, marginBottom: 10}}
             label='Sprinkler heads in area are protected'
             labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
@@ -219,7 +224,14 @@ const styles = StyleSheet.create({
     height: 40,
     marginTop: 5,
     marginBottom: 10,
-    borderColor: 'gray',
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  fireInput: {
+    height: 40,
+    marginTop: 5,
+    marginBottom: 10,
+    borderColor: 'black',
     borderWidth: 1
   },
   picker: {

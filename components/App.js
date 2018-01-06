@@ -18,7 +18,7 @@ export default class App extends Component {
     this.state = {
       userEmail: null,
       userID: null,
-      user: null,
+      user: 'robbie',
       currentView: 'home',
     };
     this.setUser = this.setUser.bind(this);
