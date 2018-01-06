@@ -55,7 +55,6 @@ export default class HotworkForm extends Component <{}> {
   }
 
   postForm() {
-    Alert.alert('hey')
     fetch('http://localhost:4000/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
@@ -77,7 +76,11 @@ export default class HotworkForm extends Component <{}> {
         sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
         signature: this.state.signature,
       })
-    });
+    })
+      .then(() => {
+      Alert.alert('Form Submitted Successfully')
+      this.props.setView('home');
+    })
   };
 
   showSubmitButton() {

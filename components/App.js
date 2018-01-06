@@ -19,7 +19,7 @@ export default class App extends Component {
       userEmail: null,
       userID: null,
       user: 'robbie',
-      currentView: 'pretask',
+      currentView: 'hotwork',
     };
     this.setUser = this.setUser.bind(this);
     this.setView = this.setView.bind(this);
@@ -68,6 +68,7 @@ export default class App extends Component {
             userEmail={this.state.userEmail}
             userID={this.state.userID}
             user={this.state.user}
+            setView={this.setView}
           />
         </View>
       );
@@ -80,6 +81,7 @@ export default class App extends Component {
             userEmail={this.state.userEmail}
             userID={this.state.userID}
             user={this.state.user}
+            setView={this.setView}
           />
         </View>
       );
