@@ -77,7 +77,6 @@ export default class PretaskForm extends Component <{}> {
   }
 
   postForm() {
-    Alert.alert('hey')
     fetch('http://localhost:4000/api/v1/forms/pretask', {
       method: 'POST',
       headers: {
@@ -109,6 +108,10 @@ export default class PretaskForm extends Component <{}> {
         hazards: this.state.hazards,
         signature: this.state.signature
       })
+    })
+    .then(() => {
+      Alert.alert('Form Submitted Successfully')
+      this.props.setView('home');
     });
   };
 
