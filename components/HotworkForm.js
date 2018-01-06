@@ -9,7 +9,8 @@ import {
   Alert,
   Picker,
   DatePickerIOS,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
 import CheckBox from 'react-native-checkbox';
 import SignaturePad from 'react-native-signature-pad';
@@ -82,10 +83,14 @@ export default class HotworkForm extends Component <{}> {
   showSubmitButton() {
     if(this.state.signature) {
       return(
-        <Button
-        onPress={() => this.postForm()}
-        title="Submit"
-        />
+        <TouchableOpacity
+          onPress={() => this.postForm()}
+          >
+          <View style={styles.button}>
+            <Text style={{fontSize:16}}>Submit</Text>
+          </View>
+        </TouchableOpacity>
+
       )
     }
   }
@@ -187,16 +192,18 @@ export default class HotworkForm extends Component <{}> {
             })}
           />
 
-          <View>
-            {this.showSubmitButton()}
-          </View>
-
-          <Text>Sign Below</Text>
+          <Text style={{fontSize: 16, textAlign:'center', marginTop: 15, marginBottom:5}}>
+            Sign Below
+          </Text>
           <SignaturePad onError={this._signaturePadError}
           onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
           style={{ backgroundColor: 'white',
-                        width: 300, height: 150 }}
+                        flex: 1, height: 150 }}
           />
+
+          <View>
+            {this.showSubmitButton()}
+          </View>
 
         </View>
       </ScrollView>
@@ -236,5 +243,11 @@ const styles = StyleSheet.create({
   },
   picker: {
     height: 40,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    marginTop: 20
   }
 });
