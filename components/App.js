@@ -16,6 +16,8 @@ export default class App extends Component<{}> {
   constructor() {
     super();
     this.state = {
+      userEmail: null,
+      userID: null,
       user: null,
       currentView: 'home',
     };
@@ -23,8 +25,8 @@ export default class App extends Component<{}> {
     this.setView = this.setView.bind(this);
   }
 
-  setUser(email) {
-    this.setState({ user: email });
+  setUser(userEmail, userID, user) {
+    this.setState({ userEmail, userID, user });
   }
 
   setView(currentView) {
