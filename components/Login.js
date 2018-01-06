@@ -6,7 +6,8 @@ import {
   View,
   TextInput,
   Button,
-  Alert
+  Alert,
+  Image
 } from 'react-native';
 
 import firebase from '../firebase';
@@ -34,6 +35,10 @@ export default class Login extends Component<{}> {
     if(!this.state.createAccount){
       return (
         <View style={styles.container}>
+          <Text style={styles.header}>
+            Construction Forms
+          </Text>
+          <Image source={require('../assets/logo.png')} style={styles.logo}/>
           <Text style={styles.login}>
             Login Here
           </Text>
@@ -71,10 +76,20 @@ export default class Login extends Component<{}> {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 180,
+    marginTop: 100,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E8C712',
+  },
+  header: {
+    fontSize: 36,
+    textAlign: 'center',
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    marginTop: 20,
+    marginBottom: 20
   },
   login: {
     textAlign: 'center',

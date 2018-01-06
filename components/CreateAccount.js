@@ -7,7 +7,8 @@ import {
   TextInput,
   Button,
   Alert,
-  Picker
+  Picker,
+  Image
 } from 'react-native';
 
 import firebase from '../firebase';
@@ -50,6 +51,10 @@ export default class CreateAccount extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.header}>
+          Construction Forms
+        </Text>
+        <Image source={require('../assets/logo.png')} style={styles.logo}/>
         <Text style={styles.login}>
           Create Account Here
         </Text>
@@ -98,10 +103,20 @@ export default class CreateAccount extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 180,
+    marginTop: 100,
     backgroundColor: '#E8C712',
+  },
+  header: {
+    marginTop: 0,
+    fontSize: 36,
+    textAlign: 'center',
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    marginTop: 20,
+    marginBottom: 20
   },
   login: {
     textAlign: 'center',

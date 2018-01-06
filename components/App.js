@@ -7,58 +7,51 @@ import {
   Button
 } from 'react-native';
 
+import Landing from './Landing';
 import Login from './Login';
 import HotworkForm from './HotworkForm';
 import PretaskForm from './PretaskForm';
 
 export default class App extends Component<{}> {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      user: "robbieg@gmail.com",
-      currentView: 'home'
+      user: null,
+      currentView: 'home',
     };
     this.setUser = this.setUser.bind(this);
+    this.setView = this.setView.bind(this);
   }
 
   setUser(email) {
-    this.setState({user: email})
+    this.setState({ user: email });
+  }
+
+  setView(currentView) {
+    this.setState({ currentView });
   }
 
   ifLoggedIn() {
-    if(this.state.user && this.state.currentView === 'home'){
+    if (this.state.user && this.state.currentView === 'home') {
       return (
         <View style={styles.container}>
-          <Text style={styles.header}>
-            Construction Forms
-          </Text>
-          <Text style={styles.user}>
-            Welcome, {this.state.user}
-          </Text>
-          <Text>
-            Choose your form to complete!
-          </Text>
-          <Button
-            style={styles.formButton}
-            onPress={() => this.setState({currentView: 'hotwork'})}
-            title="HotWork Permit"
-          />
-          <Button
-            style={styles.formButton}
-            onPress={() => this.setState({currentView: 'pretask'})}
-            title="Pretask Plan Form"
+          <Landing
+            user={this.state.user}
+            setView={this.setView}
           />
         </View>
-      )
-    } else {
-      return <View>
+      );
+    }
+
+    return (
+      <View>
         <Login setUser={this.setUser} />
       </View>
-    }
+    );
   }
 
   render() {
-    if(this.state.currentView === 'home'){
+    if (this.state.currentView === 'home') {
       return (
         <View style={styles.container}>
           {this.ifLoggedIn()}
@@ -66,21 +59,23 @@ export default class App extends Component<{}> {
       );
     }
 
-    if(this.state.currentView === 'hotwork'){
+    if (this.state.currentView === 'hotwork') {
       return (
         <View style={styles.container}>
           <HotworkForm />
         </View>
-      )
+      );
     }
 
-    if(this.state.currentView === 'pretask'){
+    if (this.state.currentView === 'pretask') {
       return (
         <View style={styles.container}>
           <PretaskForm />
         </View>
-      )
+      );
     }
+
+    return null;
   }
 }
 
@@ -89,18 +84,4 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#E8C712',
   },
-  header: {
-    marginTop: 180,
-    fontSize: 36,
-    textAlign: 'center',
-  },
-  user : {
-    textAlign: 'center'
-  },
-  formButton: {
-
-    height: 50,
-    width: 200,
-    color: 'blue'
-  }
 });
