@@ -33,7 +33,7 @@ export default class HotworkForm extends Component <{}> {
       flammablesRemoved: false,
       smokeDetectorsDisabled: false,
       sprinklerHeadsProtected: false,
-      signature: ''
+      signature: null
     }
   }
 
@@ -78,6 +78,17 @@ export default class HotworkForm extends Component <{}> {
       })
     });
   };
+
+  showSubmitButton() {
+    if(this.state.signature) {
+      return(
+        <Button
+        onPress={() => this.postForm()}
+        title="Submit"
+        />
+      )
+    }
+  }
 
   render(){
     return (
@@ -166,20 +177,17 @@ export default class HotworkForm extends Component <{}> {
             })}
           />
 
-
-
-          <Button
-            onPress={() => this.postForm()}
-            title="Submit"
-          />
-
-
-
           <SignaturePad onError={this._signaturePadError}
           onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
           style={{ backgroundColor: 'white',
                         width: 300, height: 150 }}
           />
+
+          <View>
+            {this.showSubmitButton()}
+          </View>
+
+
         </View>
       </ScrollView>
     )
