@@ -19,8 +19,9 @@ export default class HotworkForm extends Component <{}> {
   constructor(){
     super();
     this.state = {
-      employee_name: '',
-      employee_email: '',
+      employee_name: null,
+      employee_email: null,
+      employee_id: null,
       project_id: null,
       company: '',
       date: new Date(),
@@ -44,6 +45,14 @@ export default class HotworkForm extends Component <{}> {
     this.setState({signature: base64DataUrl});
   };
 
+  setUsers() {
+    this.setState({
+      employee_name: this.props.user,
+      employee_email: this.props.userEmail,
+      employee_id: this.props.userID,
+    })
+  }
+
   postForm() {
     Alert.alert('hey')
     fetch('http://localhost:4000/api/v1/forms/hotwork', {
@@ -55,6 +64,7 @@ export default class HotworkForm extends Component <{}> {
       body: JSON.stringify({
         employee_name: this.state.employee_name,
         employee_email: this.state.employee_email,
+        employee_id: this.state.employee_id,
         project_id: this.state.project_id,
         company: this.state.company,
         date: this.state.date,
@@ -80,22 +90,24 @@ export default class HotworkForm extends Component <{}> {
           <Text>Employee Name</Text>
           <TextInput
             autoCorrect={false}
+            value={this.props.user}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ employee_name: text })}
           />
 
           <Text>Email</Text>
           <TextInput
             autoCorrect={false}
+            value={this.props.userEmail}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ employee_email: text })}
           />
 
           <Text>Project ID</Text>
           <TextInput
             autoCorrect={false}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ project_id: text })}
+            onChangeText={(text) => {
+              this.setState({ project_id: text })
+              this.setUsers()}}
           />
 
           <Text>Company</Text>

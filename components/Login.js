@@ -26,8 +26,7 @@ export default class Login extends Component<{}> {
 
   login(email, password) {
     firebase.auth().signInWithEmailAndPassword(email,password)
-      .then(response => this.props.setUser(response.email))
-      .then(() => this.getEmployeeData(email))
+      .then(response => this.getEmployeeData(email))
       //catch error here
   }
 

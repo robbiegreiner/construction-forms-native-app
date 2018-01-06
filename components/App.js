@@ -64,7 +64,11 @@ export default class App extends Component<{}> {
     if (this.state.currentView === 'hotwork') {
       return (
         <View style={styles.container}>
-          <HotworkForm />
+          <HotworkForm
+            userEmail={this.state.userEmail}
+            userID={this.state.userID}
+            user={this.state.user}
+          />
         </View>
       );
     }

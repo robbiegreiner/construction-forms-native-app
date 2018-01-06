@@ -28,7 +28,7 @@ export default class Landing extends Component<{}> {
         <Image source={require('../assets/logo.png')}
         style={styles.logo}/>
         <Text style={styles.user}>
-          Welcome, {this.props.user}
+          Welcome, {this.props.user}!
         </Text>
         <Text style={styles.title}>
           Choose your form to complete!
