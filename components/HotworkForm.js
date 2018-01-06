@@ -59,14 +59,12 @@ export default class HotworkForm extends Component <{}> {
         company: this.state.company,
         date: this.state.date,
         firewatchRequirement: this.state.firewatchRequirement,
-        timeStart: this.state.timeStart,
-        finishTime: this.state.finishTime,
         areaInspected: this.state.areaInspected,
         fireExtinguisher: this.state.fireExtinguisher,
         flammablesRemoved: this.state.flammablesRemoved,
         smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
         sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
-        signature: this.state.signature
+        signature: this.state.signature,
       })
     });
   };
