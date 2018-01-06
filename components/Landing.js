@@ -26,7 +26,7 @@ export default class Landing extends Component<{}> {
           Construction Forms
         </Text>
         <Image source={require('../assets/logo.png')}
-        style={{height: 100, width:100}}/>
+        style={styles.logo}/>
         <Text style={styles.user}>
           Welcome, {this.props.user}
         </Text>
@@ -55,19 +55,26 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   header: {
-    marginTop: 180,
+    marginTop: 100,
     fontSize: 36,
     textAlign: 'center',
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    marginTop: 20,
+    marginBottom: 20
   },
   user : {
     textAlign: 'center',
     fontSize: 20,
     marginTop: 10,
-    marginBottom:40,
+    marginBottom: 30,
     fontWeight: 'bold'
   },
   title : {
     textAlign: 'center',
+    marginBottom: 10,
   },
   formButton: {
     height: 50,
