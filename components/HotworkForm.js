@@ -192,13 +192,19 @@ export default class HotworkForm extends Component <{}> {
             })}
           />
 
-          <Text style={{fontSize: 16, textAlign:'center', marginTop: 15, marginBottom:5}}>
-            Sign Below
+          <Text style={{
+            fontSize: 16,
+            textAlign:'center',
+            marginTop: 15,
+            marginBottom:5}}>
+              Sign Below
           </Text>
           <SignaturePad onError={this._signaturePadError}
           onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
-          style={{ backgroundColor: 'white',
-                        flex: 1, height: 150 }}
+          style={{
+            backgroundColor: 'white',
+            flex: 1,
+            height: 150 }}
           />
 
           <View>
