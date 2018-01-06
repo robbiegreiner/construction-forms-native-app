@@ -12,7 +12,7 @@ import Login from './Login';
 import HotworkForm from './HotworkForm';
 import PretaskForm from './PretaskForm';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -76,7 +76,11 @@ export default class App extends Component<{}> {
     if (this.state.currentView === 'pretask') {
       return (
         <View style={styles.container}>
-          <PretaskForm />
+          <PretaskForm
+            userEmail={this.state.userEmail}
+            userID={this.state.userID}
+            user={this.state.user}
+          />
         </View>
       );
     }

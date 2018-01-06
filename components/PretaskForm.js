@@ -44,6 +44,14 @@ export default class PretaskForm extends Component <{}> {
     }
   }
 
+  setUsers() {
+    this.setState({
+      employee_name: this.props.user,
+      employee_email: this.props.userEmail,
+      employee_id: this.props.userID,
+    })
+  }
+
   _signaturePadError(error){
     console.error(error);
   };
@@ -63,6 +71,7 @@ export default class PretaskForm extends Component <{}> {
       body: JSON.stringify({
         employee_name: this.state.employee_name,
         employee_email: this.state.employee_email,
+        employee_id: this.state.employee_id,
         project_id: this.state.project_id,
         company: this.state.company,
         date: this.state.date,
@@ -101,22 +110,24 @@ export default class PretaskForm extends Component <{}> {
           <Text>Employee Name</Text>
           <TextInput
             autoCorrect={false}
+            value={this.props.user}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ employee_name: text })}
           />
 
           <Text>Email</Text>
           <TextInput
             autoCorrect={false}
+            value={this.props.userEmail}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ employee_email: text })}
           />
 
           <Text>Project ID</Text>
           <TextInput
             autoCorrect={false}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ project_id: text })}
+            onChangeText={(text) => {
+              this.setState({ project_id: text })
+              this.setUsers()}}
           />
 
           <Text>Company</Text>
@@ -278,7 +289,7 @@ export default class PretaskForm extends Component <{}> {
                         width: 300, height: 150 }}
           />
 
-
+          {/* set state to signed and enable button */}
           <Button
             onPress={() => this.postForm()}
             title="Submit"
