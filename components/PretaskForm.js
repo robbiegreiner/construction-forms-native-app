@@ -60,6 +60,17 @@ export default class PretaskForm extends Component <{}> {
     this.setState({signature: base64DataUrl});
   };
 
+  showSubmitButton() {
+    if(this.state.signature) {
+      return(
+        <Button
+        onPress={() => this.postForm()}
+        title="Submit"
+        />
+      )
+    }
+  }
+
   postForm() {
     Alert.alert('hey')
     fetch('http://localhost:4000/api/v1/forms/pretask', {
@@ -283,20 +294,15 @@ export default class PretaskForm extends Component <{}> {
             onChangeText={(text) => this.setState({ hazards: text })}
           />
 
+          <View>
+            {this.showSubmitButton()}
+          </View>
+
           <SignaturePad onError={this._signaturePadError}
           onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
           style={{ backgroundColor: 'white',
                         width: 300, height: 150 }}
           />
-
-          {/* set state to signed and enable button */}
-          <Button
-            onPress={() => this.postForm()}
-            title="Submit"
-          />
-
-
-
 
         </View>
       </ScrollView>

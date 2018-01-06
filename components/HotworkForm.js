@@ -143,6 +143,7 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             label='Area Inspected'
+            labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               areaInspected: checked
             })}
@@ -150,6 +151,7 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             label='Fire Extinguisher Present'
+            labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               fireExtinguisher: checked
             })}
@@ -157,6 +159,7 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
             label='All flammables and combustibles removed from the area'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -164,6 +167,7 @@ export default class HotworkForm extends Component <{}> {
           />
 
           <CheckBox
+            labelStyle={{color:'black'}}
             label='Smoke Detectors in area are disabled'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -172,21 +176,22 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             label='Sprinkler heads in area are protected'
+            labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               sprinklerHeadsProtected: checked
             })}
-          />
-
-          <SignaturePad onError={this._signaturePadError}
-          onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
-          style={{ backgroundColor: 'white',
-                        width: 300, height: 150 }}
           />
 
           <View>
             {this.showSubmitButton()}
           </View>
 
+          <Text>Sign Below</Text>
+          <SignaturePad onError={this._signaturePadError}
+          onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
+          style={{ backgroundColor: 'white',
+                        width: 300, height: 150 }}
+          />
 
         </View>
       </ScrollView>
