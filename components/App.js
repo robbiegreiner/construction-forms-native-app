@@ -13,42 +13,45 @@ import HotworkForm from './HotworkForm';
 import PretaskForm from './PretaskForm';
 
 export default class App extends Component<{}> {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      user: "robbieg@gmail.com",
-      currentView: 'home'
+      user: 'robbieg@gmail.com',
+      currentView: 'home',
     };
     this.setUser = this.setUser.bind(this);
     this.setView = this.setView.bind(this);
   }
 
   setUser(email) {
-    this.setState({user: email})
+    this.setState({ user: email });
   }
 
   setView(currentView) {
-    this.setState({currentView})
+    this.setState({ currentView });
   }
 
   ifLoggedIn() {
-    if(this.state.user && this.state.currentView === 'home'){
+    if (this.state.user && this.state.currentView === 'home') {
       return (
         <View style={styles.container}>
           <Landing
             user={this.state.user}
-            setView={this.setView} />
+            setView={this.setView}
+          />
         </View>
-      )
-    } else {
-      return <View>
+      );
+    }
+
+    return (
+      <View>
         <Login setUser={this.setUser} />
       </View>
-    }
+    );
   }
 
   render() {
-    if(this.state.currentView === 'home'){
+    if (this.state.currentView === 'home') {
       return (
         <View style={styles.container}>
           {this.ifLoggedIn()}
@@ -56,21 +59,23 @@ export default class App extends Component<{}> {
       );
     }
 
-    if(this.state.currentView === 'hotwork'){
+    if (this.state.currentView === 'hotwork') {
       return (
         <View style={styles.container}>
           <HotworkForm />
         </View>
-      )
+      );
     }
 
-    if(this.state.currentView === 'pretask'){
+    if (this.state.currentView === 'pretask') {
       return (
         <View style={styles.container}>
           <PretaskForm />
         </View>
-      )
+      );
     }
+
+    return null;
   }
 }
 
@@ -78,5 +83,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E8C712',
-  }
+  },
 });

@@ -6,7 +6,8 @@ import {
   View,
   TextInput,
   Button,
-  Alert
+  Alert,
+  Image
 } from 'react-native';
 
 import firebase from '../firebase';
@@ -24,10 +25,12 @@ export default class Landing extends Component<{}> {
         <Text style={styles.header}>
           Construction Forms
         </Text>
+        <Image source={require('../assets/logo.png')}
+        style={{height: 100, width:100}}/>
         <Text style={styles.user}>
           Welcome, {this.props.user}
         </Text>
-        <Text style={styles.user}>
+        <Text style={styles.title}>
           Choose your form to complete!
         </Text>
         <Button
@@ -49,6 +52,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E8C712',
+    alignItems: 'center'
   },
   header: {
     marginTop: 180,
@@ -56,7 +60,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   user : {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: 20,
+    marginTop: 10,
+    marginBottom:40,
+    fontWeight: 'bold'
+  },
+  title : {
+    textAlign: 'center',
   },
   formButton: {
     height: 50,
