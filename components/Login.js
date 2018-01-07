@@ -21,7 +21,6 @@ export default class Login extends Component<{}> {
       email: '',
       password: '',
       createAccount: null,
-      error: null
     };
   }
 
