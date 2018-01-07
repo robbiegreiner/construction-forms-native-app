@@ -14,20 +14,24 @@ import firebase from '../firebase';
 import CreateAccount from './CreateAccount';
 
 
-export default class Login extends Component {
+export default class Login extends Component<{}> {
   constructor(){
     super()
     this.state = {
       email: '',
       password: '',
-      createAccount: null
+      createAccount: null,
+      error: null
     };
   }
 
   login(email, password) {
     firebase.auth().signInWithEmailAndPassword(email,password)
       .then(response => this.getEmployeeData(email))
-      //catch error here
+      .catch(error => {
+        Alert.alert(error.message);
+        this.setState({email:'', password:''})
+      })
   }
 
   getEmployeeData(email) {
@@ -56,12 +60,14 @@ export default class Login extends Component {
           <TextInput
             style={{height:40, width:200}}
             placeholder="email"
+            value={this.state.email}
             onChangeText={(text) => this.setState({email: text})}
           />
           <TextInput
             style={{height:40, width: 200}}
             secureTextEntry={true}
             placeholder="password"
+            value={this.state.password}
             onChangeText={(text) => this.setState({password: text})}
           />
 
