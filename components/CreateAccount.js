@@ -27,6 +27,11 @@ export default class CreateAccount extends Component<{}> {
   }
 
   createUser(email, password, position, phone, name) {
+    if(!name.length && !position.length && !phone.length){
+      Alert.alert('Please complete all fields');
+      return;
+    }
+
     firebase.auth().createUserWithEmailAndPassword(email,password)
       .then(() => this.postEmployee(email, position, phone, name))
       .catch(error => {
@@ -102,7 +107,7 @@ export default class CreateAccount extends Component<{}> {
             this.state.phone,
             this.state.name
           )}
-          title="Create Account"
+          title="Submit"
         />
       </View>
     );
