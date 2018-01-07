@@ -76,7 +76,23 @@ export default class PretaskForm extends Component <{}> {
     }
   }
 
+  checkInputs() {
+    const keys = Object.keys(this.state);
+    let error = false;
+    keys.forEach(key => {
+      if(this.state[key] !== false && this.state[key] !== null && !this.state[key].length){
+        error = true;
+      }
+    })
+    return error;
+  }
+
   postForm() {
+    if(this.checkInputs()){
+      Alert.alert('Please complete all fields');
+      return;
+    }
+    
     fetch('http://localhost:4000/api/v1/forms/pretask', {
       method: 'POST',
       headers: {
@@ -125,7 +141,7 @@ export default class PretaskForm extends Component <{}> {
           <Text style={styles.header}>
             Pretask Plan Form
           </Text>
-          
+
           <Button
             style={styles.backButton}
             onPress={() => this.props.setView('home')}

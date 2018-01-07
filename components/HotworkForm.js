@@ -54,7 +54,23 @@ export default class HotworkForm extends Component <{}> {
     })
   }
 
+  checkInputs() {
+    const keys = Object.keys(this.state);
+    let error = false;
+    keys.forEach(key => {
+      if(this.state[key] !== false && this.state[key] !== null && !this.state[key].length){
+        error = true;
+      }
+    })
+    return error;
+  }
+
   postForm() {
+    if(this.checkInputs()){
+      Alert.alert('Please complete all fields');
+      return;
+    }
+
     fetch('http://localhost:4000/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
@@ -81,6 +97,9 @@ export default class HotworkForm extends Component <{}> {
       Alert.alert('Form Submitted Successfully')
       this.props.setView('home');
     })
+      .catch(error => {
+        Alert.alert(error.message);
+      })
   };
 
   showSubmitButton() {
