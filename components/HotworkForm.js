@@ -54,8 +54,25 @@ export default class HotworkForm extends Component <{}> {
     })
   }
 
+  checkInputs() {
+    const keys = Object.keys(this.state);
+    let error = false;
+    keys.forEach(key => {
+      if(this.state[key] !== false && this.state[key] !== null && !this.state[key].length){
+        error = true;
+      }
+    })
+    return error;
+  }
+
   postForm() {
-    fetch('http://localhost:4000/api/v1/forms/hotwork', {
+    if(this.checkInputs()){
+      Alert.alert('Please complete all fields');
+      return;
+    }
+
+    // http://localhost:4000
+    fetch('https://construction-forms-backend.herokuapp.com/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -81,6 +98,9 @@ export default class HotworkForm extends Component <{}> {
       Alert.alert('Form Submitted Successfully')
       this.props.setView('home');
     })
+      .catch(error => {
+        Alert.alert(error.message);
+      })
   };
 
   showSubmitButton() {
@@ -89,7 +109,7 @@ export default class HotworkForm extends Component <{}> {
         <TouchableOpacity
           onPress={() => this.postForm()}
           >
-          <View style={styles.button}>
+          <View style={styles.submitButton}>
             <Text style={{fontSize:16}}>Submit</Text>
           </View>
         </TouchableOpacity>
@@ -105,6 +125,11 @@ export default class HotworkForm extends Component <{}> {
           <Text style={styles.header}>
             Hotwork Permit
           </Text>
+          <Button
+            style={styles.backButton}
+            onPress={() => this.props.setView('home')}
+            title="Go Back"
+          />
 
           <Text>Employee Name</Text>
           <TextInput
@@ -253,10 +278,13 @@ const styles = StyleSheet.create({
   picker: {
     height: 40,
   },
-  button: {
+  submitButton: {
     alignItems: 'center',
     backgroundColor: '#DDDDDD',
     padding: 10,
     marginTop: 20
+  },
+  backButton: {
+    alignItems: 'flex-start'
   }
 });

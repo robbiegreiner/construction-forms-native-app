@@ -27,13 +27,24 @@ export default class CreateAccount extends Component<{}> {
   }
 
   createUser(email, password, position, phone, name) {
+    if(!name.length && !position.length && !phone.length){
+      Alert.alert('Please complete all fields');
+      return;
+    }
+
     firebase.auth().createUserWithEmailAndPassword(email,password)
-      .then(this.postEmployee(email, position, phone, name))
-      //catch error here
+      .then(() => this.postEmployee(email, position, phone, name))
+      .catch(error => {
+        Alert.alert(error.message);
+        this.setState({email:'', password:'', position:'', phone:'', name:''})
+        this.props.setUser(null,null,null)
+      })
   }
 
   postEmployee(email, position, phone, name) {
-    fetch(`http://localhost:4000/api/v1/employees`, {
+    // http://localhost:4000/api/v1/employees
+
+    fetch(`https://construction-forms-backend.herokuapp.com/api/v1/employees`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -44,7 +55,7 @@ export default class CreateAccount extends Component<{}> {
       }
     )
     .then(res => res.json())
-    .then(response => this.props.setUser(email, response.id, name))
+    .then(response => this.props.setUser(email, response.id, 'WTF!'))
     .catch(error => { throw error; })
   }
 
@@ -61,26 +72,31 @@ export default class CreateAccount extends Component<{}> {
         <TextInput
           style={{height:40, width:200}}
           placeholder="name"
+          value={this.state.name}
           onChangeText={(text) => this.setState({name: text})}
         />
         <TextInput
           style={{height:40, width:200}}
           placeholder="position"
+          value={this.state.position}
           onChangeText={(text) => this.setState({position: text})}
         />
         <TextInput
           style={{height:40, width:200}}
+          value={this.state.phone}
           placeholder="phone"
           onChangeText={(text) => this.setState({phone: text})}
         />
         <TextInput
           style={{height:40, width:200}}
+          value={this.state.email}
           placeholder="email"
           onChangeText={(text) => this.setState({email: text})}
         />
         <TextInput
           style={{height:40, width:200}}
           secureTextEntry={true}
+          value={this.state.password}
           placeholder="password"
           onChangeText={(text) => this.setState({password: text})}
         />
@@ -93,7 +109,7 @@ export default class CreateAccount extends Component<{}> {
             this.state.phone,
             this.state.name
           )}
-          title="Create Account"
+          title="Submit"
         />
       </View>
     );
