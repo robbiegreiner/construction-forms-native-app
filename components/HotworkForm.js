@@ -71,7 +71,8 @@ export default class HotworkForm extends Component <{}> {
       return;
     }
 
-    fetch('http://localhost:4000/api/v1/forms/hotwork', {
+    // http://localhost:4000
+    fetch('https://construction-forms-backend.herokuapp.com/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
