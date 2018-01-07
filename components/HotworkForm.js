@@ -9,7 +9,8 @@ import {
   Alert,
   Picker,
   DatePickerIOS,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
 import CheckBox from 'react-native-checkbox';
 import SignaturePad from 'react-native-signature-pad';
@@ -33,7 +34,7 @@ export default class HotworkForm extends Component <{}> {
       flammablesRemoved: false,
       smokeDetectorsDisabled: false,
       sprinklerHeadsProtected: false,
-      signature: ''
+      signature: null
     }
   }
 
@@ -54,7 +55,6 @@ export default class HotworkForm extends Component <{}> {
   }
 
   postForm() {
-    Alert.alert('hey')
     fetch('http://localhost:4000/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
@@ -76,8 +76,27 @@ export default class HotworkForm extends Component <{}> {
         sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
         signature: this.state.signature,
       })
-    });
+    })
+      .then(() => {
+      Alert.alert('Form Submitted Successfully')
+      this.props.setView('home');
+    })
   };
+
+  showSubmitButton() {
+    if(this.state.signature) {
+      return(
+        <TouchableOpacity
+          onPress={() => this.postForm()}
+          >
+          <View style={styles.button}>
+            <Text style={{fontSize:16}}>Submit</Text>
+          </View>
+        </TouchableOpacity>
+
+      )
+    }
+  }
 
   render(){
     return (
@@ -117,21 +136,23 @@ export default class HotworkForm extends Component <{}> {
             onChangeText={(text) => this.setState({ company: text })}
           />
 
-          <Text>Date</Text>
+          <Text style={{marginTop:20}}>Date</Text>
           <DatePickerIOS
             date={this.state.date}
             onDateChange={(newDate) => this.setState({date: newDate})}
           />
 
-          <Text>Fire Watch Requirement</Text>
+          <Text style={{marginTop:10}}>Fire Watch Requirement</Text>
           <TextInput
             autoCorrect={false}
-            style={styles.smallInput}
+            style={styles.fireInput}
             onChangeText={(text) => this.setState({ firewatchRequirement: text })}
           />
 
           <CheckBox
             label='Area Inspected'
+            containerStyle={{marginTop:10}}
+            labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               areaInspected: checked
             })}
@@ -139,6 +160,8 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             label='Fire Extinguisher Present'
+            containerStyle={{marginTop:10}}
+            labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               fireExtinguisher: checked
             })}
@@ -146,6 +169,8 @@ export default class HotworkForm extends Component <{}> {
 
           <CheckBox
             labelLines={2}
+            labelStyle={{color:'black'}}
+            containerStyle={{marginTop:10}}
             label='All flammables and combustibles removed from the area'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -153,6 +178,8 @@ export default class HotworkForm extends Component <{}> {
           />
 
           <CheckBox
+            labelStyle={{color:'black'}}
+            containerStyle={{marginTop:10}}
             label='Smoke Detectors in area are disabled'
             onChange={(checked) => this.setState({
               flammablesRemoved: checked
@@ -160,26 +187,33 @@ export default class HotworkForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10, marginBottom: 10}}
             label='Sprinkler heads in area are protected'
+            labelStyle={{color:'black'}}
             onChange={(checked) => this.setState({
               sprinklerHeadsProtected: checked
             })}
           />
 
-
-
-          <Button
-            onPress={() => this.postForm()}
-            title="Submit"
-          />
-
-
-
+          <Text style={{
+            fontSize: 16,
+            textAlign:'center',
+            marginTop: 15,
+            marginBottom:5}}>
+              Sign Below
+          </Text>
           <SignaturePad onError={this._signaturePadError}
           onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
-          style={{ backgroundColor: 'white',
-                        width: 300, height: 150 }}
+          style={{
+            backgroundColor: 'white',
+            flex: 1,
+            height: 150 }}
           />
+
+          <View>
+            {this.showSubmitButton()}
+          </View>
+
         </View>
       </ScrollView>
     )
@@ -206,10 +240,23 @@ const styles = StyleSheet.create({
     height: 40,
     marginTop: 5,
     marginBottom: 10,
-    borderColor: 'gray',
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  fireInput: {
+    height: 40,
+    marginTop: 5,
+    marginBottom: 10,
+    borderColor: 'black',
     borderWidth: 1
   },
   picker: {
     height: 40,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    marginTop: 20
   }
 });

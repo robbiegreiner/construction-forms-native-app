@@ -68,6 +68,7 @@ export default class App extends Component {
             userEmail={this.state.userEmail}
             userID={this.state.userID}
             user={this.state.user}
+            setView={this.setView}
           />
         </View>
       );
@@ -80,6 +81,7 @@ export default class App extends Component {
             userEmail={this.state.userEmail}
             userID={this.state.userID}
             user={this.state.user}
+            setView={this.setView}
           />
         </View>
       );

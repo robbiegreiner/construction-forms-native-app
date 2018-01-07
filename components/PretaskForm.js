@@ -9,7 +9,8 @@ import {
   Alert,
   Picker,
   DatePickerIOS,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
 import CheckBox from 'react-native-checkbox';
 import SignaturePad from 'react-native-signature-pad';
@@ -60,8 +61,22 @@ export default class PretaskForm extends Component <{}> {
     this.setState({signature: base64DataUrl});
   };
 
+  showSubmitButton() {
+    if(this.state.signature) {
+      return(
+        <TouchableOpacity
+          onPress={() => this.postForm()}
+          >
+          <View style={styles.button}>
+            <Text style={{fontSize:16}}>Submit</Text>
+          </View>
+        </TouchableOpacity>
+
+      )
+    }
+  }
+
   postForm() {
-    Alert.alert('hey')
     fetch('http://localhost:4000/api/v1/forms/pretask', {
       method: 'POST',
       headers: {
@@ -93,6 +108,10 @@ export default class PretaskForm extends Component <{}> {
         hazards: this.state.hazards,
         signature: this.state.signature
       })
+    })
+    .then(() => {
+      Alert.alert('Form Submitted Successfully')
+      this.props.setView('home');
     });
   };
 
@@ -137,7 +156,7 @@ export default class PretaskForm extends Component <{}> {
             onChangeText={(text) => this.setState({ company: text })}
           />
 
-          <Text>Date</Text>
+          <Text style={{marginTop:20}}>Date</Text>
           <DatePickerIOS
             date={this.state.date}
             onDateChange={(newDate) => this.setState({date: newDate})}
@@ -150,8 +169,8 @@ export default class PretaskForm extends Component <{}> {
             onChangeText={(text) => this.setState({ crewSize: text })}
           />
 
-
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Does every crew member know how to use assigned tools & equipment?'
@@ -161,6 +180,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Does this work require special training?'
@@ -170,6 +190,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Do you need to review an MSDS to proceed with this work?'
@@ -179,6 +200,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Is there adequate lighting and access?'
@@ -188,6 +210,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Will weather conditions affect the safety or quality of this work?'
@@ -197,6 +220,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Does this task require shutdown of systems or equipment?'
@@ -206,6 +230,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Is there any potential to impact existing Owner or Construction activity? '
@@ -215,6 +240,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Have shop drawings, contract drawings, and as-builts been reviewed? '
@@ -224,6 +250,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Will there be any discharge of fluids? '
@@ -233,6 +260,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Do other subcontractors need to be involved?'
@@ -242,6 +270,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Does this task require any special permits/procedures?'
@@ -251,6 +280,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Employee is assigned a buddy/partner?'
@@ -260,6 +290,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10}}
             labelLines={3}
             labelStyle={{color:'black'}}
             label='Crew knows location of fire extinguishers, eyewashes, defibulators?'
@@ -269,6 +300,7 @@ export default class PretaskForm extends Component <{}> {
           />
 
           <CheckBox
+            containerStyle={{marginTop:10, marginBottom: 20}}
             labelLines={2}
             labelStyle={{color:'black'}}
             label='Does this work involve any heavy or repetitive lifting?'
@@ -277,26 +309,29 @@ export default class PretaskForm extends Component <{}> {
             })}
           />
 
-          <Text>Identify any hazards that will be faced during this work</Text>
+          <Text style={{fontSize:16}}>Identify any hazards that will be faced during this work</Text>
           <TextInput
+            multiline={true}
             style={styles.bigInput}
             onChangeText={(text) => this.setState({ hazards: text })}
           />
 
+          <Text style={{
+            fontSize: 16,
+            textAlign:'center',
+            marginTop: 15,
+            marginBottom:5}}>
+              Sign Below
+          </Text>
           <SignaturePad onError={this._signaturePadError}
           onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
           style={{ backgroundColor: 'white',
-                        width: 300, height: 150 }}
+                        flex: 1, height: 150 }}
           />
 
-          {/* set state to signed and enable button */}
-          <Button
-            onPress={() => this.postForm()}
-            title="Submit"
-          />
-
-
-
+          <View>
+            {this.showSubmitButton()}
+          </View>
 
         </View>
       </ScrollView>
@@ -321,13 +356,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   smallInput: {
+    padding: 5,
     height: 40,
     marginTop: 5,
     marginBottom: 10,
-    borderColor: 'gray',
+    borderColor: 'black',
     borderWidth: 1
   },
   bigInput: {
+    padding: 5,
     height: 120,
     marginTop: 5,
     marginBottom: 10,
@@ -336,5 +373,11 @@ const styles = StyleSheet.create({
   },
   picker: {
     height: 40,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    marginTop: 20
   }
 });
