@@ -14,7 +14,6 @@ import {
 } from 'react-native';
 import CheckBox from 'react-native-checkbox';
 import SignaturePad from 'react-native-signature-pad';
-import Demo from './Demo'
 
 export default class HotworkForm extends Component <{}> {
   constructor(){
@@ -27,8 +26,6 @@ export default class HotworkForm extends Component <{}> {
       company: '',
       date: new Date(),
       firewatchRequirement: '',
-      timeStart: '',
-      finishTime: '',
       areaInspected: false,
       fireExtinguisher: false,
       flammablesRemoved: false,
@@ -66,12 +63,13 @@ export default class HotworkForm extends Component <{}> {
   }
 
   postForm() {
-    if(this.checkInputs()){
-      Alert.alert('Please complete all fields');
-      return;
-    }
+    // if(this.checkInputs()){
+    //   Alert.alert('Please complete all fields');
+    //   return;
+    // }
 
     // http://localhost:4000
+    //https://construction-forms-backend.herokuapp.com
     fetch('https://construction-forms-backend.herokuapp.com/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
@@ -94,7 +92,7 @@ export default class HotworkForm extends Component <{}> {
         signature: this.state.signature,
       })
     })
-      .then(() => {
+      .then((response) => {
       Alert.alert('Form Submitted Successfully')
       this.props.setView('home');
     })

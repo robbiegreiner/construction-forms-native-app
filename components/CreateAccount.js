@@ -55,7 +55,7 @@ export default class CreateAccount extends Component<{}> {
       }
     )
     .then(res => res.json())
-    .then(response => this.props.setUser(email, response.id, 'WTF!'))
+    .then(response => this.props.setUser(email, response.id, name))
     .catch(error => { throw error; })
   }
 

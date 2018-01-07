@@ -82,10 +82,10 @@ export default class PretaskForm extends Component {
   }
 
   postForm() {
-    if (this.checkInputs()) {
-      Alert.alert('Please complete all fields');
-      return;
-    }
+    // if (this.checkInputs()) {
+    //   Alert.alert('Please complete all fields');
+    //   return;
+    // }
     // http://localhost:4000
     fetch('https://construction-forms-backend.herokuapp.com/api/v1/forms/pretask', {
       method: 'POST',
@@ -341,7 +341,7 @@ export default class PretaskForm extends Component {
               Sign Below
           </Text>
           <SignaturePad
-            onChange={base64DataUrl => this.setState({ signature: base64DataUrl })}
+            onChange={({ base64DataUrl }) => this.setState({ signature: base64DataUrl })}
             style={{
               backgroundColor: 'white',
               flex: 1,
