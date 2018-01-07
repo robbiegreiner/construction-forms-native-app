@@ -89,7 +89,7 @@ export default class HotworkForm extends Component <{}> {
         <TouchableOpacity
           onPress={() => this.postForm()}
           >
-          <View style={styles.button}>
+          <View style={styles.submitButton}>
             <Text style={{fontSize:16}}>Submit</Text>
           </View>
         </TouchableOpacity>
@@ -105,6 +105,11 @@ export default class HotworkForm extends Component <{}> {
           <Text style={styles.header}>
             Hotwork Permit
           </Text>
+          <Button
+            style={styles.backButton}
+            onPress={() => this.props.setView('home')}
+            title="Go Back"
+          />
 
           <Text>Employee Name</Text>
           <TextInput
@@ -253,10 +258,13 @@ const styles = StyleSheet.create({
   picker: {
     height: 40,
   },
-  button: {
+  submitButton: {
     alignItems: 'center',
     backgroundColor: '#DDDDDD',
     padding: 10,
     marginTop: 20
+  },
+  backButton: {
+    alignItems: 'flex-start'
   }
 });

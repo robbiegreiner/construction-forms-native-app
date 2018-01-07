@@ -125,6 +125,12 @@ export default class PretaskForm extends Component <{}> {
           <Text style={styles.header}>
             Pretask Plan Form
           </Text>
+          
+          <Button
+            style={styles.backButton}
+            onPress={() => this.props.setView('home')}
+            title="Go Back"
+          />
 
           <Text>Employee Name</Text>
           <TextInput
