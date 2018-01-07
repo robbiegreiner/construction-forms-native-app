@@ -40,6 +40,7 @@ export default class App extends Component {
           <Landing
             user={this.state.user}
             setView={this.setView}
+            setUser={this.setUser}
           />
         </View>
       );

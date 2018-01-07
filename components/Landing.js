@@ -19,6 +19,11 @@ export default class Landing extends Component<{}> {
     super()
   }
 
+  signOut() {
+    this.props.setUser();
+    firebase.auth().signOut();
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -42,6 +47,11 @@ export default class Landing extends Component<{}> {
           style={styles.formButton}
           onPress={() => this.props.setView('pretask')}
           title="Pretask Plan Form"
+        />
+        <Button
+          style={styles.formButton}
+          onPress={() => this.signOut()}
+          title="Sign Out"
         />
       </View>
     )
