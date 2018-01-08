@@ -2,14 +2,14 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from '../components/App';
+import Landing from '../components/Landing';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<App />);
+  const tree = renderer.create(<Landing />);
   expect(tree).toBeDefined();
 });
 
 it('maches snapshot', () => {
-  const tree = renderer.create(<App />).toJSON();
+  const tree = renderer.create(<Landing />).toJSON();
   expect(tree).toMatchSnapshot();
 });
