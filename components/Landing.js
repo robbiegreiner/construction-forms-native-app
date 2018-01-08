@@ -12,6 +12,7 @@ import {
 
 import firebase from '../firebase';
 import CreateAccount from './CreateAccount';
+import PropTypes from 'prop-types';
 
 
 export default class Landing extends Component<{}> {
