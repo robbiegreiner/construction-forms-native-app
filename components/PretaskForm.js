@@ -22,7 +22,7 @@ export default class PretaskForm extends Component {
       employee_email: '',
       project_id: null,
       company: '',
-      date: '',
+      date: new Date(),
       crewSize: null,
       tools: false,
       requireTraining: false,
