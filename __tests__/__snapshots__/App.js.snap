@@ -65,6 +65,7 @@ exports[`maches snapshot 1`] = `
       </Text>
       <TextInput
         allowFontScaling={true}
+        autoCorrect={false}
         onChangeText={[Function]}
         placeholder="email"
         style={
@@ -77,6 +78,7 @@ exports[`maches snapshot 1`] = `
       />
       <TextInput
         allowFontScaling={true}
+        autoCorrect={false}
         onChangeText={[Function]}
         placeholder="password"
         secureTextEntry={true}

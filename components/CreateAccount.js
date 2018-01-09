@@ -47,9 +47,7 @@ export default class CreateAccount extends Component {
   }
 
   postEmployee(email, position, phone, name) {
-    // http://localhost:4000/api/v1/employees
-
-    fetch(' https://construction-forms-backend.herokuapp.com/api/v1/employees', {
+    fetch('https://construction-forms-backend.herokuapp.com/api/v1/employees', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

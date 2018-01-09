@@ -56,12 +56,14 @@ export default class Login extends Component {
             Login Here
           </Text>
           <TextInput
+            autoCorrect={false}
             style={{ height: 40, width: 200 }}
             placeholder="email"
             value={this.state.email}
             onChangeText={text => this.setState({ email: text })}
           />
           <TextInput
+            autoCorrect={false}
             style={{ height: 40, width: 200 }}
             secureTextEntry={true}
             placeholder="password"

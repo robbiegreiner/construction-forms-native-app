@@ -145,7 +145,7 @@ ShallowWrapper {
           Date
         </Text>
         <DatePickerIOS
-          date=""
+          date={2018-01-09T17:08:19.028Z}
           mode="datetime"
           onDateChange={[Function]}
         />
@@ -477,7 +477,7 @@ ShallowWrapper {
             Date
           </Text>,
           <DatePickerIOS
-            date=""
+            date={2018-01-09T17:08:19.028Z}
             mode="datetime"
             onDateChange={[Function]}
           />,
@@ -875,7 +875,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "date": "",
+            "date": 2018-01-09T17:08:19.028Z,
             "mode": "datetime",
             "onDateChange": [Function],
           },
@@ -1103,7 +1103,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": undefined,
+            "children": null,
           },
           "ref": null,
           "rendered": null,
@@ -1248,7 +1248,7 @@ ShallowWrapper {
             Date
           </Text>
           <DatePickerIOS
-            date=""
+            date={2018-01-09T17:08:19.028Z}
             mode="datetime"
             onDateChange={[Function]}
           />
@@ -1580,7 +1580,7 @@ ShallowWrapper {
               Date
             </Text>,
             <DatePickerIOS
-              date=""
+              date={2018-01-09T17:08:19.028Z}
               mode="datetime"
               onDateChange={[Function]}
             />,
@@ -1978,7 +1978,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "date": "",
+              "date": 2018-01-09T17:08:19.028Z,
               "mode": "datetime",
               "onDateChange": [Function],
             },
@@ -2206,7 +2206,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": undefined,
+              "children": null,
             },
             "ref": null,
             "rendered": null,
