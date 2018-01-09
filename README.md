@@ -2,6 +2,8 @@
 
 ### Robbie Greiner & Nick Teets
 
+![Alt-Text](https://media.giphy.com/media/xULW8LjDNOuPaR5OaA/giphy.gif)
+
 ## Introduction
 
  This application allows construction field workers and managers complete forms in the field using their mobile devices.
