@@ -3,7 +3,7 @@
 ### Robbie Greiner & Nick Teets
 
 <p align="center">
-  <img src="https://media.giphy.com/media/xULW8LjDNOuPaR5OaA/giphy.gif" />
+  <img src="https://media.giphy.com/media/xULW8EdiNbPOFLq2sM/giphy.gif" />
 </p>
 
 
