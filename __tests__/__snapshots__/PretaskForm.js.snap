@@ -1,0 +1,3909 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PretaskForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <View
+        style={
+          Object {
+            "margin": 40,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 36,
+              "marginBottom": 15,
+              "marginTop": 15,
+              "textAlign": "center",
+            }
+          }
+        >
+          Pretask Plan Form
+        </Text>
+        <Button
+          onPress={[Function]}
+          style={undefined}
+          title="Go Back"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Employee Name
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          autoCorrect={false}
+          style={
+            Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+          value={undefined}
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Email
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          autoCorrect={false}
+          style={
+            Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+          value={undefined}
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Project ID
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          autoCorrect={false}
+          onChangeText={[Function]}
+          style={
+            Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Company
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          autoCorrect={false}
+          onChangeText={[Function]}
+          style={
+            Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "marginTop": 20,
+            }
+          }
+        >
+          Date
+        </Text>
+        <DatePickerIOS
+          date=""
+          mode="datetime"
+          onDateChange={[Function]}
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Crew Size
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          autoCorrect={false}
+          onChangeText={[Function]}
+          style={
+            Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Does every crew member know how to use assigned tools & equipment?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Does this work require special training?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Do you need to review an MSDS to proceed with this work?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Is there adequate lighting and access?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Will weather conditions affect the safety or quality of this work?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Does this task require shutdown of systems or equipment?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Is there any potential to impact existing Owner or Construction activity? "
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Have shop drawings, contract drawings, and as-builts been reviewed? "
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Will there be any discharge of fluids? "
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Do other subcontractors need to be involved?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Does this task require any special permits/procedures?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Employee is assigned a buddy/partner?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginTop": 10,
+            }
+          }
+          label="Crew knows location of fire extinguishers, eyewashes, defibulators?"
+          labelBefore={false}
+          labelLines={3}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <CheckBox
+          checked={null}
+          checkedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            }
+          }
+          containerStyle={
+            Object {
+              "marginBottom": 20,
+              "marginTop": 10,
+            }
+          }
+          label="Does this work involve any heavy or repetitive lifting?"
+          labelBefore={false}
+          labelLines={2}
+          labelStyle={
+            Object {
+              "color": "black",
+            }
+          }
+          onChange={[Function]}
+          uncheckedImage={
+            Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            }
+          }
+          underlayColor="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 16,
+            }
+          }
+        >
+          Identify any hazards that will be faced during this work
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          multiline={true}
+          onChangeText={[Function]}
+          style={
+            Object {
+              "borderColor": "gray",
+              "borderWidth": 1,
+              "height": 120,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 16,
+              "marginBottom": 5,
+              "marginTop": 15,
+              "textAlign": "center",
+            }
+          }
+        >
+          Sign Below
+        </Text>
+        <SignaturePad
+          onChange={[Function]}
+          onError={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "flex": 1,
+              "height": 150,
+            }
+          }
+        />
+        <View />
+      </View>,
+      "style": Object {
+        "backgroundColor": "#E8C712",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 36,
+                "marginBottom": 15,
+                "marginTop": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Pretask Plan Form
+          </Text>,
+          <Button
+            onPress={[Function]}
+            style={undefined}
+            title="Go Back"
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Employee Name
+          </Text>,
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+            value={undefined}
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Email
+          </Text>,
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+            value={undefined}
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Project ID
+          </Text>,
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Company
+          </Text>,
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginTop": 20,
+              }
+            }
+          >
+            Date
+          </Text>,
+          <DatePickerIOS
+            date=""
+            mode="datetime"
+            onDateChange={[Function]}
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Crew Size
+          </Text>,
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does every crew member know how to use assigned tools & equipment?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does this work require special training?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Do you need to review an MSDS to proceed with this work?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Is there adequate lighting and access?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Will weather conditions affect the safety or quality of this work?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does this task require shutdown of systems or equipment?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Is there any potential to impact existing Owner or Construction activity? "
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Have shop drawings, contract drawings, and as-builts been reviewed? "
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Will there be any discharge of fluids? "
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Do other subcontractors need to be involved?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does this task require any special permits/procedures?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Employee is assigned a buddy/partner?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Crew knows location of fire extinguishers, eyewashes, defibulators?"
+            labelBefore={false}
+            labelLines={3}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginBottom": 20,
+                "marginTop": 10,
+              }
+            }
+            label="Does this work involve any heavy or repetitive lifting?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 16,
+              }
+            }
+          >
+            Identify any hazards that will be faced during this work
+          </Text>,
+          <TextInput
+            allowFontScaling={true}
+            multiline={true}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+                "height": 120,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 16,
+                "marginBottom": 5,
+                "marginTop": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Sign Below
+          </Text>,
+          <SignaturePad
+            onChange={[Function]}
+            onError={[Function]}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "flex": 1,
+                "height": 150,
+              }
+            }
+          />,
+          <View />,
+        ],
+        "style": Object {
+          "margin": 40,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Pretask Plan Form",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "fontSize": 36,
+              "marginBottom": 15,
+              "marginTop": 15,
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": "Pretask Plan Form",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onPress": [Function],
+            "style": undefined,
+            "title": "Go Back",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Employee Name",
+            "ellipsizeMode": "tail",
+          },
+          "ref": null,
+          "rendered": "Employee Name",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "autoCorrect": false,
+            "style": Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            },
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Email",
+            "ellipsizeMode": "tail",
+          },
+          "ref": null,
+          "rendered": "Email",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "autoCorrect": false,
+            "style": Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            },
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Project ID",
+            "ellipsizeMode": "tail",
+          },
+          "ref": null,
+          "rendered": "Project ID",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "autoCorrect": false,
+            "onChangeText": [Function],
+            "style": Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Company",
+            "ellipsizeMode": "tail",
+          },
+          "ref": null,
+          "rendered": "Company",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "autoCorrect": false,
+            "onChangeText": [Function],
+            "style": Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Date",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "marginTop": 20,
+            },
+          },
+          "ref": null,
+          "rendered": "Date",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "date": "",
+            "mode": "datetime",
+            "onDateChange": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Crew Size",
+            "ellipsizeMode": "tail",
+          },
+          "ref": null,
+          "rendered": "Crew Size",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "autoCorrect": false,
+            "onChangeText": [Function],
+            "style": Object {
+              "borderColor": "black",
+              "borderWidth": 1,
+              "height": 40,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Does every crew member know how to use assigned tools & equipment?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Does this work require special training?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Do you need to review an MSDS to proceed with this work?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Is there adequate lighting and access?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Will weather conditions affect the safety or quality of this work?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Does this task require shutdown of systems or equipment?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Is there any potential to impact existing Owner or Construction activity? ",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Have shop drawings, contract drawings, and as-builts been reviewed? ",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Will there be any discharge of fluids? ",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Do other subcontractors need to be involved?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Does this task require any special permits/procedures?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Employee is assigned a buddy/partner?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginTop": 10,
+            },
+            "label": "Crew knows location of fire extinguishers, eyewashes, defibulators?",
+            "labelBefore": false,
+            "labelLines": 3,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "checked": null,
+            "checkedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_enabled.png",
+            },
+            "containerStyle": Object {
+              "marginBottom": 20,
+              "marginTop": 10,
+            },
+            "label": "Does this work involve any heavy or repetitive lifting?",
+            "labelBefore": false,
+            "labelLines": 2,
+            "labelStyle": Object {
+              "color": "black",
+            },
+            "onChange": [Function],
+            "uncheckedImage": Object {
+              "testUri": "../../react-native-checkbox/cb_disabled.png",
+            },
+            "underlayColor": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Identify any hazards that will be faced during this work",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "fontSize": 16,
+            },
+          },
+          "ref": null,
+          "rendered": "Identify any hazards that will be faced during this work",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "multiline": true,
+            "onChangeText": [Function],
+            "style": Object {
+              "borderColor": "gray",
+              "borderWidth": 1,
+              "height": 120,
+              "marginBottom": 10,
+              "marginTop": 5,
+              "padding": 5,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Sign Below",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "fontSize": 16,
+              "marginBottom": 5,
+              "marginTop": 15,
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": "Sign Below",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onChange": [Function],
+            "onError": [Function],
+            "style": Object {
+              "backgroundColor": "white",
+              "flex": 1,
+              "height": 150,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": null,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <View
+          style={
+            Object {
+              "margin": 40,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 36,
+                "marginBottom": 15,
+                "marginTop": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Pretask Plan Form
+          </Text>
+          <Button
+            onPress={[Function]}
+            style={undefined}
+            title="Go Back"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Employee Name
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+            value={undefined}
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Email
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+            value={undefined}
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Project ID
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Company
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginTop": 20,
+              }
+            }
+          >
+            Date
+          </Text>
+          <DatePickerIOS
+            date=""
+            mode="datetime"
+            onDateChange={[Function]}
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Crew Size
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does every crew member know how to use assigned tools & equipment?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does this work require special training?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Do you need to review an MSDS to proceed with this work?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Is there adequate lighting and access?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Will weather conditions affect the safety or quality of this work?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does this task require shutdown of systems or equipment?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Is there any potential to impact existing Owner or Construction activity? "
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Have shop drawings, contract drawings, and as-builts been reviewed? "
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Will there be any discharge of fluids? "
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Do other subcontractors need to be involved?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Does this task require any special permits/procedures?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Employee is assigned a buddy/partner?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            label="Crew knows location of fire extinguishers, eyewashes, defibulators?"
+            labelBefore={false}
+            labelLines={3}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <CheckBox
+            checked={null}
+            checkedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              }
+            }
+            containerStyle={
+              Object {
+                "marginBottom": 20,
+                "marginTop": 10,
+              }
+            }
+            label="Does this work involve any heavy or repetitive lifting?"
+            labelBefore={false}
+            labelLines={2}
+            labelStyle={
+              Object {
+                "color": "black",
+              }
+            }
+            onChange={[Function]}
+            uncheckedImage={
+              Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              }
+            }
+            underlayColor="transparent"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 16,
+              }
+            }
+          >
+            Identify any hazards that will be faced during this work
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            multiline={true}
+            onChangeText={[Function]}
+            style={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+                "height": 120,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              }
+            }
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 16,
+                "marginBottom": 5,
+                "marginTop": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Sign Below
+          </Text>
+          <SignaturePad
+            onChange={[Function]}
+            onError={[Function]}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "flex": 1,
+                "height": 150,
+              }
+            }
+          />
+          <View />
+        </View>,
+        "style": Object {
+          "backgroundColor": "#E8C712",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 36,
+                  "marginBottom": 15,
+                  "marginTop": 15,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Pretask Plan Form
+            </Text>,
+            <Button
+              onPress={[Function]}
+              style={undefined}
+              title="Go Back"
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Employee Name
+            </Text>,
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              style={
+                Object {
+                  "borderColor": "black",
+                  "borderWidth": 1,
+                  "height": 40,
+                  "marginBottom": 10,
+                  "marginTop": 5,
+                  "padding": 5,
+                }
+              }
+              value={undefined}
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Email
+            </Text>,
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              style={
+                Object {
+                  "borderColor": "black",
+                  "borderWidth": 1,
+                  "height": 40,
+                  "marginBottom": 10,
+                  "marginTop": 5,
+                  "padding": 5,
+                }
+              }
+              value={undefined}
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Project ID
+            </Text>,
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              onChangeText={[Function]}
+              style={
+                Object {
+                  "borderColor": "black",
+                  "borderWidth": 1,
+                  "height": 40,
+                  "marginBottom": 10,
+                  "marginTop": 5,
+                  "padding": 5,
+                }
+              }
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Company
+            </Text>,
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              onChangeText={[Function]}
+              style={
+                Object {
+                  "borderColor": "black",
+                  "borderWidth": 1,
+                  "height": 40,
+                  "marginBottom": 10,
+                  "marginTop": 5,
+                  "padding": 5,
+                }
+              }
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginTop": 20,
+                }
+              }
+            >
+              Date
+            </Text>,
+            <DatePickerIOS
+              date=""
+              mode="datetime"
+              onDateChange={[Function]}
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Crew Size
+            </Text>,
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              onChangeText={[Function]}
+              style={
+                Object {
+                  "borderColor": "black",
+                  "borderWidth": 1,
+                  "height": 40,
+                  "marginBottom": 10,
+                  "marginTop": 5,
+                  "padding": 5,
+                }
+              }
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Does every crew member know how to use assigned tools & equipment?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Does this work require special training?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Do you need to review an MSDS to proceed with this work?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Is there adequate lighting and access?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Will weather conditions affect the safety or quality of this work?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Does this task require shutdown of systems or equipment?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Is there any potential to impact existing Owner or Construction activity? "
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Have shop drawings, contract drawings, and as-builts been reviewed? "
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Will there be any discharge of fluids? "
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Do other subcontractors need to be involved?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Does this task require any special permits/procedures?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Employee is assigned a buddy/partner?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginTop": 10,
+                }
+              }
+              label="Crew knows location of fire extinguishers, eyewashes, defibulators?"
+              labelBefore={false}
+              labelLines={3}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <CheckBox
+              checked={null}
+              checkedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_enabled.png",
+                }
+              }
+              containerStyle={
+                Object {
+                  "marginBottom": 20,
+                  "marginTop": 10,
+                }
+              }
+              label="Does this work involve any heavy or repetitive lifting?"
+              labelBefore={false}
+              labelLines={2}
+              labelStyle={
+                Object {
+                  "color": "black",
+                }
+              }
+              onChange={[Function]}
+              uncheckedImage={
+                Object {
+                  "testUri": "../../react-native-checkbox/cb_disabled.png",
+                }
+              }
+              underlayColor="transparent"
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 16,
+                }
+              }
+            >
+              Identify any hazards that will be faced during this work
+            </Text>,
+            <TextInput
+              allowFontScaling={true}
+              multiline={true}
+              onChangeText={[Function]}
+              style={
+                Object {
+                  "borderColor": "gray",
+                  "borderWidth": 1,
+                  "height": 120,
+                  "marginBottom": 10,
+                  "marginTop": 5,
+                  "padding": 5,
+                }
+              }
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 16,
+                  "marginBottom": 5,
+                  "marginTop": 15,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Sign Below
+            </Text>,
+            <SignaturePad
+              onChange={[Function]}
+              onError={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "height": 150,
+                }
+              }
+            />,
+            <View />,
+          ],
+          "style": Object {
+            "margin": 40,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Pretask Plan Form",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 36,
+                "marginBottom": 15,
+                "marginTop": 15,
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "Pretask Plan Form",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "onPress": [Function],
+              "style": undefined,
+              "title": "Go Back",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Employee Name",
+              "ellipsizeMode": "tail",
+            },
+            "ref": null,
+            "rendered": "Employee Name",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "autoCorrect": false,
+              "style": Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              },
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Email",
+              "ellipsizeMode": "tail",
+            },
+            "ref": null,
+            "rendered": "Email",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "autoCorrect": false,
+              "style": Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              },
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Project ID",
+              "ellipsizeMode": "tail",
+            },
+            "ref": null,
+            "rendered": "Project ID",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "autoCorrect": false,
+              "onChangeText": [Function],
+              "style": Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Company",
+              "ellipsizeMode": "tail",
+            },
+            "ref": null,
+            "rendered": "Company",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "autoCorrect": false,
+              "onChangeText": [Function],
+              "style": Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Date",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "marginTop": 20,
+              },
+            },
+            "ref": null,
+            "rendered": "Date",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "date": "",
+              "mode": "datetime",
+              "onDateChange": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Crew Size",
+              "ellipsizeMode": "tail",
+            },
+            "ref": null,
+            "rendered": "Crew Size",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "autoCorrect": false,
+              "onChangeText": [Function],
+              "style": Object {
+                "borderColor": "black",
+                "borderWidth": 1,
+                "height": 40,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Does every crew member know how to use assigned tools & equipment?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Does this work require special training?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Do you need to review an MSDS to proceed with this work?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Is there adequate lighting and access?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Will weather conditions affect the safety or quality of this work?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Does this task require shutdown of systems or equipment?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Is there any potential to impact existing Owner or Construction activity? ",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Have shop drawings, contract drawings, and as-builts been reviewed? ",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Will there be any discharge of fluids? ",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Do other subcontractors need to be involved?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Does this task require any special permits/procedures?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Employee is assigned a buddy/partner?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginTop": 10,
+              },
+              "label": "Crew knows location of fire extinguishers, eyewashes, defibulators?",
+              "labelBefore": false,
+              "labelLines": 3,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "checked": null,
+              "checkedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_enabled.png",
+              },
+              "containerStyle": Object {
+                "marginBottom": 20,
+                "marginTop": 10,
+              },
+              "label": "Does this work involve any heavy or repetitive lifting?",
+              "labelBefore": false,
+              "labelLines": 2,
+              "labelStyle": Object {
+                "color": "black",
+              },
+              "onChange": [Function],
+              "uncheckedImage": Object {
+                "testUri": "../../react-native-checkbox/cb_disabled.png",
+              },
+              "underlayColor": "transparent",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Identify any hazards that will be faced during this work",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 16,
+              },
+            },
+            "ref": null,
+            "rendered": "Identify any hazards that will be faced during this work",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "multiline": true,
+              "onChangeText": [Function],
+              "style": Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+                "height": 120,
+                "marginBottom": 10,
+                "marginTop": 5,
+                "padding": 5,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Sign Below",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 16,
+                "marginBottom": 5,
+                "marginTop": 15,
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "Sign Below",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "onChange": [Function],
+              "onError": [Function],
+              "style": Object {
+                "backgroundColor": "white",
+                "flex": 1,
+                "height": 150,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
