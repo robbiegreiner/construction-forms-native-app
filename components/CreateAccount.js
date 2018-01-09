@@ -31,7 +31,7 @@ export default class CreateAccount extends Component {
       return;
     }
 
-    firebase.auth().createUserWithEmailAndPassword(email,password)
+    firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(() => this.postEmployee(email, position, phone, name))
       .catch((error) => {
         Alert.alert(error.message);
@@ -74,7 +74,7 @@ export default class CreateAccount extends Component {
           Create Account Here
         </Text>
         <TextInput
-          style={{ height: 40, width: 200}}
+          style={{ height: 40, width: 200 }}
           placeholder="name"
           value={this.state.name}
           onChangeText={text => this.setState({ name: text })}
