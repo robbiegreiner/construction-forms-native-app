@@ -2,7 +2,10 @@
 
 ### Robbie Greiner & Nick Teets
 
-![Alt-Text](https://media.giphy.com/media/xULW8LjDNOuPaR5OaA/giphy.gif)
+<p align="center">
+  ![Alt-Text](https://media.giphy.com/media/xULW8LjDNOuPaR5OaA/giphy.gif)
+</p>
+
 
 ## Introduction
 
