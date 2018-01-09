@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   StyleSheet,
@@ -115,3 +116,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+CreateAccount.propTypes = {
+  setUser: PropTypes.func,
+};

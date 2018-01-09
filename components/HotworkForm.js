@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   StyleSheet,
@@ -286,3 +287,10 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   }
 });
+
+HotworkForm.propTypes = {
+  userEmail: PropTypes.string,
+  userID: PropTypes.number,
+  user: PropTypes.string,
+  setView: PropTypes.func,
+};
