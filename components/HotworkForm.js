@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
   TextInput,
   Button,
   Alert,
-  Picker,
   DatePickerIOS,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import CheckBox from 'react-native-checkbox';
 import SignaturePad from 'react-native-signature-pad';
 
-export default class HotworkForm extends Component <{}> {
-  constructor(){
+export default class HotworkForm extends Component {
+  constructor() {
     super();
     this.state = {
       employee_name: null,
@@ -32,50 +30,39 @@ export default class HotworkForm extends Component <{}> {
       flammablesRemoved: false,
       smokeDetectorsDisabled: false,
       sprinklerHeadsProtected: false,
-      signature: null
-    }
+      signature: null,
+    };
   }
-
-  _signaturePadError(error){
-    console.error(error);
-  };
-
-  _signaturePadChange({base64DataUrl}){
-    this.setState({signature: base64DataUrl});
-  };
 
   setUsers() {
     this.setState({
       employee_name: this.props.user,
       employee_email: this.props.userEmail,
       employee_id: this.props.userID,
-    })
+    });
+  }
+
+  _signaturePadChange({ base64DataUrl }) {
+    this.setState({ signature: base64DataUrl });
   }
 
   checkInputs() {
     const keys = Object.keys(this.state);
     let error = false;
-    keys.forEach(key => {
-      if(this.state[key] !== false && this.state[key] !== null && !this.state[key].length){
+    keys.forEach((key) => {
+      if (this.state[key] !== false && this.state[key] !== null && !this.state[key].length) {
         error = true;
       }
-    })
+    });
     return error;
   }
 
   postForm() {
-    // if(this.checkInputs()){
-    //   Alert.alert('Please complete all fields');
-    //   return;
-    // }
-
-    // http://localhost:4000
-    //https://construction-forms-backend.herokuapp.com
     fetch('https://construction-forms-backend.herokuapp.com/api/v1/forms/hotwork', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'content-type' : 'application/json'
+        'content-type': 'application/json',
       },
       body: JSON.stringify({
         employee_name: this.state.employee_name,
@@ -91,33 +78,33 @@ export default class HotworkForm extends Component <{}> {
         smokeDetectorsDisabled: this.state.smokeDetectorsDisabled,
         sprinklerHeadsProtected: this.state.sprinklerHeadsProtected,
         signature: this.state.signature,
+      }),
+    })
+      .then(() => {
+        Alert.alert('Form Submitted Successfully');
+        this.props.setView('home');
       })
-    })
-      .then((response) => {
-      Alert.alert('Form Submitted Successfully')
-      this.props.setView('home');
-    })
-      .catch(error => {
+      .catch((error) => {
         Alert.alert(error.message);
-      })
-  };
-
-  showSubmitButton() {
-    if(this.state.signature) {
-      return(
-        <TouchableOpacity
-          onPress={() => this.postForm()}
-          >
-          <View style={styles.submitButton}>
-            <Text style={{fontSize:16}}>Submit</Text>
-          </View>
-        </TouchableOpacity>
-
-      )
-    }
+      });
   }
 
-  render(){
+  showSubmitButton() {
+    if (this.state.signature) {
+      return (
+        <TouchableOpacity
+          onPress={() => this.postForm()}
+        >
+          <View style={styles.submitButton}>
+            <Text style={{ fontSize: 16 }}>Submit</Text>
+          </View>
+        </TouchableOpacity>
+      );
+    }
+    return null;
+  }
+
+  render() {
     return (
       <ScrollView style={styles.scrollArea}>
         <View style={styles.container}>
@@ -149,89 +136,93 @@ export default class HotworkForm extends Component <{}> {
             autoCorrect={false}
             style={styles.smallInput}
             onChangeText={(text) => {
-              this.setState({ project_id: text })
-              this.setUsers()}}
+              this.setState({ project_id: text });
+              this.setUsers();
+            }}
           />
 
           <Text>Company</Text>
           <TextInput
             autoCorrect={false}
             style={styles.smallInput}
-            onChangeText={(text) => this.setState({ company: text })}
+            onChangeText={text => this.setState({ company: text })}
           />
 
-          <Text style={{marginTop:20}}>Date</Text>
+          <Text style={{ marginTop: 20 }}>Date</Text>
           <DatePickerIOS
             date={this.state.date}
-            onDateChange={(newDate) => this.setState({date: newDate})}
+            onDateChange={newDate => this.setState({ date: newDate })}
           />
 
-          <Text style={{marginTop:10}}>Fire Watch Requirement</Text>
+          <Text style={{ marginTop: 10 }}>Fire Watch Requirement</Text>
           <TextInput
             autoCorrect={false}
             style={styles.fireInput}
-            onChangeText={(text) => this.setState({ firewatchRequirement: text })}
+            onChangeText={text => this.setState({ firewatchRequirement: text })}
           />
 
           <CheckBox
-            label='Area Inspected'
-            containerStyle={{marginTop:10}}
-            labelStyle={{color:'black'}}
-            onChange={(checked) => this.setState({
-              areaInspected: checked
+            label="Area Inspected"
+            containerStyle={{ marginTop: 10 }}
+            labelStyle={{ color: 'black' }}
+            onChange={checked => this.setState({
+              areaInspected: checked,
             })}
           />
 
           <CheckBox
-            label='Fire Extinguisher Present'
-            containerStyle={{marginTop:10}}
-            labelStyle={{color:'black'}}
-            onChange={(checked) => this.setState({
-              fireExtinguisher: checked
+            label="Fire Extinguisher Present"
+            containerStyle={{ marginTop: 10 }}
+            labelStyle={{ color: 'black' }}
+            onChange={checked => this.setState({
+              fireExtinguisher: checked,
             })}
           />
 
           <CheckBox
             labelLines={2}
-            labelStyle={{color:'black'}}
-            containerStyle={{marginTop:10}}
-            label='All flammables and combustibles removed from the area'
-            onChange={(checked) => this.setState({
-              flammablesRemoved: checked
+            labelStyle={{ color: 'black' }}
+            containerStyle={{ marginTop: 10 }}
+            label="All flammables and combustibles removed from the area"
+            onChange={checked => this.setState({
+              flammablesRemoved: checked,
             })}
           />
 
           <CheckBox
-            labelStyle={{color:'black'}}
-            containerStyle={{marginTop:10}}
-            label='Smoke Detectors in area are disabled'
-            onChange={(checked) => this.setState({
-              flammablesRemoved: checked
+            labelStyle={{ color: 'black' }}
+            containerStyle={{ marginTop: 10 }}
+            label="Smoke Detectors in area are disabled"
+            onChange={checked => this.setState({
+              flammablesRemoved: checked,
             })}
           />
 
           <CheckBox
-            containerStyle={{marginTop:10, marginBottom: 10}}
-            label='Sprinkler heads in area are protected'
-            labelStyle={{color:'black'}}
-            onChange={(checked) => this.setState({
-              sprinklerHeadsProtected: checked
+            containerStyle={{ marginTop: 10, marginBottom: 10 }}
+            label="Sprinkler heads in area are protected"
+            labelStyle={{ color: 'black' }}
+            onChange={checked => this.setState({
+              sprinklerHeadsProtected: checked,
             })}
           />
 
           <Text style={{
             fontSize: 16,
-            textAlign:'center',
+            textAlign: 'center',
             marginTop: 15,
-            marginBottom:5}}>
+            marginBottom: 5,
+            }}
+          >
               Sign Below
           </Text>
-          <SignaturePad onError={this._signaturePadError}
-          onChange={({base64DataUrl}) => this.setState({signature: base64DataUrl})}
-          style={{
+          <SignaturePad
+            onChange={({ base64DataUrl }) => this.setState({ signature: base64DataUrl })}
+            style={{
             backgroundColor: 'white',
             flex: 1,
-            height: 150 }}
+            height: 150,
+            }}
           />
 
           <View>
@@ -240,19 +231,17 @@ export default class HotworkForm extends Component <{}> {
 
         </View>
       </ScrollView>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
   scrollArea: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     backgroundColor: '#E8C712',
   },
   container: {
-    margin: 40
+    margin: 40,
   },
   header: {
     fontSize: 36,
@@ -265,14 +254,14 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 10,
     borderColor: 'black',
-    borderWidth: 1
+    borderWidth: 1,
   },
   fireInput: {
     height: 40,
     marginTop: 5,
     marginBottom: 10,
     borderColor: 'black',
-    borderWidth: 1
+    borderWidth: 1,
   },
   picker: {
     height: 40,
@@ -281,11 +270,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#DDDDDD',
     padding: 10,
-    marginTop: 20
+    marginTop: 20,
   },
   backButton: {
-    alignItems: 'flex-start'
-  }
+    alignItems: 'flex-start',
+  },
 });
 
 HotworkForm.propTypes = {
