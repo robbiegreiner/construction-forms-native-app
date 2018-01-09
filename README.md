@@ -4,7 +4,6 @@
 
 <p align="center">
   <img src="https://media.giphy.com/media/xULW8LjDNOuPaR5OaA/giphy.gif" />
-  ![Alt-Text](https://media.giphy.com/media/xULW8LjDNOuPaR5OaA/giphy.gif)
 </p>
 
 
