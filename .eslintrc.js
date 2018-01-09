@@ -6,6 +6,8 @@ module.exports = {
        "no-use-before-define": 0,
        "no-undef": 0,
        "import/no-named-as-default": 0,
-       "import/no-named-as-default-as-member": 0
+       "import/no-named-as-default-member": 0,
+       "global-require": 0,
+       "react/jsx-boolean-value": 0,
 }
 };
