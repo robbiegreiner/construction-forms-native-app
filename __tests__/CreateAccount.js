@@ -1,4 +1,3 @@
-/* eslint-disable */
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -19,12 +18,12 @@ it('maches snapshot', () => {
 });
 
 it('should have a default state', () => {
-  const wrapper = shallow(<CreateAccount  />)
+  const wrapper = shallow(<CreateAccount />)
   expect(wrapper.state()).toEqual({
     email: '',
     password: '',
     position: '',
     phone: '',
-    name: ''
+    name: '',
   });
 });

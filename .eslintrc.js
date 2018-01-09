@@ -9,5 +9,6 @@ module.exports = {
        "import/no-named-as-default-member": 0,
        "global-require": 0,
        "react/jsx-boolean-value": 0,
+       "max-len": 0,
 }
 };
