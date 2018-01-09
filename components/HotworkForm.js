@@ -25,7 +25,7 @@ export default class HotworkForm extends Component <{}> {
       employee_id: null,
       project_id: null,
       company: '',
-      date: '',
+      date: new Date(),
       firewatchRequirement: '',
       areaInspected: false,
       fireExtinguisher: false,
