@@ -145,7 +145,7 @@ ShallowWrapper {
           Date
         </Text>
         <DatePickerIOS
-          date=""
+          date={2018-01-09T17:08:17.687Z}
           mode="datetime"
           onDateChange={[Function]}
         />
@@ -752,7 +752,7 @@ ShallowWrapper {
             Date
           </Text>,
           <DatePickerIOS
-            date=""
+            date={2018-01-09T17:08:17.687Z}
             mode="datetime"
             onDateChange={[Function]}
           />,
@@ -1427,7 +1427,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "date": "",
+            "date": 2018-01-09T17:08:17.687Z,
             "mode": "datetime",
             "onDateChange": [Function],
           },
@@ -2088,7 +2088,7 @@ ShallowWrapper {
             Date
           </Text>
           <DatePickerIOS
-            date=""
+            date={2018-01-09T17:08:17.687Z}
             mode="datetime"
             onDateChange={[Function]}
           />
@@ -2695,7 +2695,7 @@ ShallowWrapper {
               Date
             </Text>,
             <DatePickerIOS
-              date=""
+              date={2018-01-09T17:08:17.687Z}
               mode="datetime"
               onDateChange={[Function]}
             />,
@@ -3370,7 +3370,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "date": "",
+              "date": 2018-01-09T17:08:17.687Z,
               "mode": "datetime",
               "onDateChange": [Function],
             },
