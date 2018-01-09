@@ -82,11 +82,6 @@ export default class PretaskForm extends Component {
   }
 
   postForm() {
-    // if (this.checkInputs()) {
-    //   Alert.alert('Please complete all fields');
-    //   return;
-    // }
-    // http://localhost:4000
     fetch('https://construction-forms-backend.herokuapp.com/api/v1/forms/pretask', {
       method: 'POST',
       headers: {

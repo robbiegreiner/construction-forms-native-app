@@ -1,4 +1,3 @@
-/* eslint-disable */
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -9,17 +8,17 @@ import HotworkForm from '../components/HotworkForm';
 configure({ adapter: new Adapter() });
 
 it('renders correctly', () => {
-  const wrapper = shallow(<HotworkForm />)
+  const wrapper = shallow(<HotworkForm />);
   expect(wrapper).toBeDefined();
-})
+});
 
 it('maches snapshot', () => {
-  const wrapper = shallow(<HotworkForm />)
+  const wrapper = shallow(<HotworkForm />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should have a default state', () => {
-  const wrapper = shallow(<HotworkForm/>)
+  const wrapper = shallow(<HotworkForm />);
   expect(wrapper.state()).toEqual({
     employee_name: null,
     employee_email: null,
@@ -33,6 +32,6 @@ it('should have a default state', () => {
     flammablesRemoved: false,
     smokeDetectorsDisabled: false,
     sprinklerHeadsProtected: false,
-    signature: null
+    signature: null,
   });
 });

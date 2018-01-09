@@ -1,4 +1,3 @@
-/* eslint-disable */
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -9,17 +8,17 @@ import PretaskForm from '../components/PretaskForm';
 configure({ adapter: new Adapter() });
 
 it('renders correctly', () => {
-  const wrapper = shallow(<PretaskForm />)
+  const wrapper = shallow(<PretaskForm />);
   expect(wrapper).toBeDefined();
-})
+});
 
 it('maches snapshot', () => {
-  const wrapper = shallow(<PretaskForm />)
+  const wrapper = shallow(<PretaskForm />);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should have a default state', () => {
-  const wrapper = shallow(<PretaskForm/>)
+  const wrapper = shallow(<PretaskForm />);
   expect(wrapper.state()).toEqual({
     employee_name: '',
     employee_email: '',

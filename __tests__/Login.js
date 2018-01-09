@@ -1,10 +1,9 @@
-/* eslint-disable */
 import 'react-native';
 import React from 'react';
+import { shallow, mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import Login from '../components/Login';
-import Adapter from 'enzyme-adapter-react-16';
-import { shallow, mount, configure } from 'enzyme';
 
 configure({ adapter: new Adapter() });
 
@@ -19,7 +18,7 @@ it('maches snapshot', () => {
 });
 
 it('should have a default state', () => {
-  const wrapper = shallow(<Login />)
+  const wrapper = shallow(<Login />);
   expect(wrapper.state()).toEqual({
     email: '',
     password: '',
